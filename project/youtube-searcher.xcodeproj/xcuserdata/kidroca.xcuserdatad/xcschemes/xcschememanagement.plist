@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>project-searcher.xcscheme</key>
+		<key>youtube-searcher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6B2C8A511C6298DC00231A2F</key>
+		<key>6B2C8A7A1C629D3900231A2F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
