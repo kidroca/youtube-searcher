@@ -15,7 +15,7 @@
             hideIssues = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B2C8A7A1C629D3900231A2F"
+               BlueprintIdentifier = "6B3DFC061C635740009D96D4"
                BuildableName = "youtube-searcher.app"
                BlueprintName = "youtube-searcher"
                ReferencedContainer = "container:youtube-searcher.xcodeproj">
@@ -29,11 +29,21 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B3DFC221C635740009D96D4"
+               BuildableName = "youtube-searcherTests.xctest"
+               BlueprintName = "youtube-searcherTests"
+               ReferencedContainer = "container:youtube-searcher.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B2C8A7A1C629D3900231A2F"
+            BlueprintIdentifier = "6B3DFC061C635740009D96D4"
             BuildableName = "youtube-searcher.app"
             BlueprintName = "youtube-searcher"
             ReferencedContainer = "container:youtube-searcher.xcodeproj">
@@ -56,7 +66,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B2C8A7A1C629D3900231A2F"
+            BlueprintIdentifier = "6B3DFC061C635740009D96D4"
             BuildableName = "youtube-searcher.app"
             BlueprintName = "youtube-searcher"
             ReferencedContainer = "container:youtube-searcher.xcodeproj">
@@ -75,7 +85,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B2C8A7A1C629D3900231A2F"
+            BlueprintIdentifier = "6B3DFC061C635740009D96D4"
             BuildableName = "youtube-searcher.app"
             BlueprintName = "youtube-searcher"
             ReferencedContainer = "container:youtube-searcher.xcodeproj">

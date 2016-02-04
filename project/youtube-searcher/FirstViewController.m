@@ -1,18 +1,18 @@
 //
-//  DataViewController.m
+//  FirstViewController.m
 //  youtube-searcher
 //
-//  Created by Peter Velkov on 2/3/16.
+//  Created by Peter Velkov on 2/4/16.
 //  Copyright © 2016 Peter Velkov. All rights reserved.
 //
 
-#import "DataViewController.h"
+#import "FirstViewController.h"
 
-@interface DataViewController ()
+@interface FirstViewController ()
 
 @end
 
-@implementation DataViewController
+@implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,11 +22,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.dataLabel.text = [self.dataObject description];
 }
 
 @end

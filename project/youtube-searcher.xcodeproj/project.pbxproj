@@ -7,35 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B2C8A801C629D3900231A2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C8A7F1C629D3900231A2F /* main.m */; };
-		6B2C8A831C629D3900231A2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C8A821C629D3900231A2F /* AppDelegate.m */; };
-		6B2C8A861C629D3900231A2F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C8A851C629D3900231A2F /* RootViewController.m */; };
-		6B2C8A891C629D3900231A2F /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C8A881C629D3900231A2F /* DataViewController.m */; };
-		6B2C8A8C1C629D3900231A2F /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C8A8B1C629D3900231A2F /* ModelController.m */; };
-		6B2C8A8F1C629D3900231A2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2C8A8D1C629D3900231A2F /* Main.storyboard */; };
-		6B2C8A911C629D3900231A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B2C8A901C629D3900231A2F /* Assets.xcassets */; };
-		6B2C8A941C629D3900231A2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2C8A921C629D3900231A2F /* LaunchScreen.storyboard */; };
+		6B3DFC0C1C635740009D96D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0B1C635740009D96D4 /* main.m */; };
+		6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0E1C635740009D96D4 /* AppDelegate.m */; };
+		6B3DFC121C635740009D96D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC111C635740009D96D4 /* FirstViewController.m */; };
+		6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC141C635740009D96D4 /* SecondViewController.m */; };
+		6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC161C635740009D96D4 /* Main.storyboard */; };
+		6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC191C635740009D96D4 /* Assets.xcassets */; };
+		6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */; };
+		6B3DFC281C635740009D96D4 /* youtube_searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6B3DFC241C635740009D96D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B3DFBFF1C635740009D96D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B3DFC061C635740009D96D4;
+			remoteInfo = "youtube-searcher";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		6B2C8A7B1C629D3900231A2F /* youtube-searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B2C8A7F1C629D3900231A2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6B2C8A811C629D3900231A2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6B2C8A821C629D3900231A2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B2C8A841C629D3900231A2F /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		6B2C8A851C629D3900231A2F /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		6B2C8A871C629D3900231A2F /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
-		6B2C8A881C629D3900231A2F /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
-		6B2C8A8A1C629D3900231A2F /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
-		6B2C8A8B1C629D3900231A2F /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
-		6B2C8A8E1C629D3900231A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6B2C8A901C629D3900231A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6B2C8A931C629D3900231A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6B2C8A951C629D3900231A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3DFC071C635740009D96D4 /* youtube-searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3DFC0B1C635740009D96D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B3DFC0D1C635740009D96D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B3DFC0E1C635740009D96D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B3DFC101C635740009D96D4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		6B3DFC111C635740009D96D4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		6B3DFC131C635740009D96D4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		6B3DFC141C635740009D96D4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		6B3DFC171C635740009D96D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B3DFC191C635740009D96D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B3DFC1C1C635740009D96D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B3DFC1E1C635740009D96D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3DFC231C635740009D96D4 /* youtube-searcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "youtube-searcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = youtube_searcherTests.m; sourceTree = "<group>"; };
+		6B3DFC291C635740009D96D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6B2C8A781C629D3900231A2F /* Frameworks */ = {
+		6B3DFC041C635740009D96D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3DFC201C635740009D96D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,61 +63,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B2C8A721C629D3900231A2F = {
+		6B3DFBFE1C635740009D96D4 = {
 			isa = PBXGroup;
 			children = (
-				6B2C8A7D1C629D3900231A2F /* project */,
-				6B2C8A7C1C629D3900231A2F /* Products */,
+				6B3DFC091C635740009D96D4 /* youtube-searcher */,
+				6B3DFC261C635740009D96D4 /* youtube-searcherTests */,
+				6B3DFC081C635740009D96D4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6B2C8A7C1C629D3900231A2F /* Products */ = {
+		6B3DFC081C635740009D96D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B2C8A7B1C629D3900231A2F /* youtube-searcher.app */,
+				6B3DFC071C635740009D96D4 /* youtube-searcher.app */,
+				6B3DFC231C635740009D96D4 /* youtube-searcherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6B2C8A7D1C629D3900231A2F /* project */ = {
+		6B3DFC091C635740009D96D4 /* youtube-searcher */ = {
 			isa = PBXGroup;
 			children = (
-				6B2C8A811C629D3900231A2F /* AppDelegate.h */,
-				6B2C8A821C629D3900231A2F /* AppDelegate.m */,
-				6B2C8A841C629D3900231A2F /* RootViewController.h */,
-				6B2C8A851C629D3900231A2F /* RootViewController.m */,
-				6B2C8A871C629D3900231A2F /* DataViewController.h */,
-				6B2C8A881C629D3900231A2F /* DataViewController.m */,
-				6B2C8A8A1C629D3900231A2F /* ModelController.h */,
-				6B2C8A8B1C629D3900231A2F /* ModelController.m */,
-				6B2C8A8D1C629D3900231A2F /* Main.storyboard */,
-				6B2C8A901C629D3900231A2F /* Assets.xcassets */,
-				6B2C8A921C629D3900231A2F /* LaunchScreen.storyboard */,
-				6B2C8A951C629D3900231A2F /* Info.plist */,
-				6B2C8A7E1C629D3900231A2F /* Supporting Files */,
+				6B3DFC0D1C635740009D96D4 /* AppDelegate.h */,
+				6B3DFC0E1C635740009D96D4 /* AppDelegate.m */,
+				6B3DFC101C635740009D96D4 /* FirstViewController.h */,
+				6B3DFC111C635740009D96D4 /* FirstViewController.m */,
+				6B3DFC131C635740009D96D4 /* SecondViewController.h */,
+				6B3DFC141C635740009D96D4 /* SecondViewController.m */,
+				6B3DFC161C635740009D96D4 /* Main.storyboard */,
+				6B3DFC191C635740009D96D4 /* Assets.xcassets */,
+				6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */,
+				6B3DFC1E1C635740009D96D4 /* Info.plist */,
+				6B3DFC0A1C635740009D96D4 /* Supporting Files */,
 			);
-			name = project;
 			path = "youtube-searcher";
 			sourceTree = "<group>";
 		};
-		6B2C8A7E1C629D3900231A2F /* Supporting Files */ = {
+		6B3DFC0A1C635740009D96D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6B2C8A7F1C629D3900231A2F /* main.m */,
+				6B3DFC0B1C635740009D96D4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B3DFC261C635740009D96D4 /* youtube-searcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */,
+				6B3DFC291C635740009D96D4 /* Info.plist */,
+			);
+			path = "youtube-searcherTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6B2C8A7A1C629D3900231A2F /* youtube-searcher */ = {
+		6B3DFC061C635740009D96D4 /* youtube-searcher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B2C8A981C629D3900231A2F /* Build configuration list for PBXNativeTarget "youtube-searcher" */;
+			buildConfigurationList = 6B3DFC2C1C635740009D96D4 /* Build configuration list for PBXNativeTarget "youtube-searcher" */;
 			buildPhases = (
-				6B2C8A771C629D3900231A2F /* Sources */,
-				6B2C8A781C629D3900231A2F /* Frameworks */,
-				6B2C8A791C629D3900231A2F /* Resources */,
+				6B3DFC031C635740009D96D4 /* Sources */,
+				6B3DFC041C635740009D96D4 /* Frameworks */,
+				6B3DFC051C635740009D96D4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -107,25 +133,48 @@
 			);
 			name = "youtube-searcher";
 			productName = "youtube-searcher";
-			productReference = 6B2C8A7B1C629D3900231A2F /* youtube-searcher.app */;
+			productReference = 6B3DFC071C635740009D96D4 /* youtube-searcher.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6B3DFC221C635740009D96D4 /* youtube-searcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B3DFC2F1C635740009D96D4 /* Build configuration list for PBXNativeTarget "youtube-searcherTests" */;
+			buildPhases = (
+				6B3DFC1F1C635740009D96D4 /* Sources */,
+				6B3DFC201C635740009D96D4 /* Frameworks */,
+				6B3DFC211C635740009D96D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B3DFC251C635740009D96D4 /* PBXTargetDependency */,
+			);
+			name = "youtube-searcherTests";
+			productName = "youtube-searcherTests";
+			productReference = 6B3DFC231C635740009D96D4 /* youtube-searcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6B2C8A731C629D3900231A2F /* Project object */ = {
+		6B3DFBFF1C635740009D96D4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Peter Velkov";
 				TargetAttributes = {
-					6B2C8A7A1C629D3900231A2F = {
+					6B3DFC061C635740009D96D4 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = Y7Z543YMUW;
 					};
+					6B3DFC221C635740009D96D4 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Y7Z543YMUW;
+						TestTargetID = 6B3DFC061C635740009D96D4;
+					};
 				};
 			};
-			buildConfigurationList = 6B2C8A761C629D3900231A2F /* Build configuration list for PBXProject "youtube-searcher" */;
+			buildConfigurationList = 6B3DFC021C635740009D96D4 /* Build configuration list for PBXProject "youtube-searcher" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -133,57 +182,80 @@
 				en,
 				Base,
 			);
-			mainGroup = 6B2C8A721C629D3900231A2F;
-			productRefGroup = 6B2C8A7C1C629D3900231A2F /* Products */;
+			mainGroup = 6B3DFBFE1C635740009D96D4;
+			productRefGroup = 6B3DFC081C635740009D96D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B2C8A7A1C629D3900231A2F /* youtube-searcher */,
+				6B3DFC061C635740009D96D4 /* youtube-searcher */,
+				6B3DFC221C635740009D96D4 /* youtube-searcherTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6B2C8A791C629D3900231A2F /* Resources */ = {
+		6B3DFC051C635740009D96D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B2C8A941C629D3900231A2F /* LaunchScreen.storyboard in Resources */,
-				6B2C8A911C629D3900231A2F /* Assets.xcassets in Resources */,
-				6B2C8A8F1C629D3900231A2F /* Main.storyboard in Resources */,
+				6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */,
+				6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */,
+				6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3DFC211C635740009D96D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6B2C8A771C629D3900231A2F /* Sources */ = {
+		6B3DFC031C635740009D96D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B2C8A891C629D3900231A2F /* DataViewController.m in Sources */,
-				6B2C8A831C629D3900231A2F /* AppDelegate.m in Sources */,
-				6B2C8A8C1C629D3900231A2F /* ModelController.m in Sources */,
-				6B2C8A801C629D3900231A2F /* main.m in Sources */,
-				6B2C8A861C629D3900231A2F /* RootViewController.m in Sources */,
+				6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */,
+				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
+				6B3DFC121C635740009D96D4 /* FirstViewController.m in Sources */,
+				6B3DFC0C1C635740009D96D4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3DFC1F1C635740009D96D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3DFC281C635740009D96D4 /* youtube_searcherTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6B3DFC251C635740009D96D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B3DFC061C635740009D96D4 /* youtube-searcher */;
+			targetProxy = 6B3DFC241C635740009D96D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		6B2C8A8D1C629D3900231A2F /* Main.storyboard */ = {
+		6B3DFC161C635740009D96D4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B2C8A8E1C629D3900231A2F /* Base */,
+				6B3DFC171C635740009D96D4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6B2C8A921C629D3900231A2F /* LaunchScreen.storyboard */ = {
+		6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B2C8A931C629D3900231A2F /* Base */,
+				6B3DFC1C1C635740009D96D4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -191,7 +263,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6B2C8A961C629D3900231A2F /* Debug */ = {
+		6B3DFC2A1C635740009D96D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +307,7 @@
 			};
 			name = Debug;
 		};
-		6B2C8A971C629D3900231A2F /* Release */ = {
+		6B3DFC2B1C635740009D96D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,7 +345,7 @@
 			};
 			name = Release;
 		};
-		6B2C8A991C629D3900231A2F /* Debug */ = {
+		6B3DFC2D1C635740009D96D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -284,7 +356,7 @@
 			};
 			name = Debug;
 		};
-		6B2C8A9A1C629D3900231A2F /* Release */ = {
+		6B3DFC2E1C635740009D96D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -295,27 +367,59 @@
 			};
 			name = Release;
 		};
+		6B3DFC301C635740009D96D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "youtube-searcherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.youtube-searcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/youtube-searcher.app/youtube-searcher";
+			};
+			name = Debug;
+		};
+		6B3DFC311C635740009D96D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "youtube-searcherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.youtube-searcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/youtube-searcher.app/youtube-searcher";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6B2C8A761C629D3900231A2F /* Build configuration list for PBXProject "youtube-searcher" */ = {
+		6B3DFC021C635740009D96D4 /* Build configuration list for PBXProject "youtube-searcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B2C8A961C629D3900231A2F /* Debug */,
-				6B2C8A971C629D3900231A2F /* Release */,
+				6B3DFC2A1C635740009D96D4 /* Debug */,
+				6B3DFC2B1C635740009D96D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B2C8A981C629D3900231A2F /* Build configuration list for PBXNativeTarget "youtube-searcher" */ = {
+		6B3DFC2C1C635740009D96D4 /* Build configuration list for PBXNativeTarget "youtube-searcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B2C8A991C629D3900231A2F /* Debug */,
-				6B2C8A9A1C629D3900231A2F /* Release */,
+				6B3DFC2D1C635740009D96D4 /* Debug */,
+				6B3DFC2E1C635740009D96D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6B3DFC2F1C635740009D96D4 /* Build configuration list for PBXNativeTarget "youtube-searcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B3DFC301C635740009D96D4 /* Debug */,
+				6B3DFC311C635740009D96D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6B2C8A731C629D3900231A2F /* Project object */;
+	rootObject = 6B3DFBFF1C635740009D96D4 /* Project object */;
 }
