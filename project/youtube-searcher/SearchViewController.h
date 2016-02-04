@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DropDownMenu.h"
 
-@interface FirstViewController : UIViewController
+@interface SearchViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet DropDownMenu *ddmOrder;
 
 @end
 

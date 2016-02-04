@@ -6,17 +6,19 @@
 //  Copyright © 2016 Peter Velkov. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "SearchViewController.h"
 
-@interface FirstViewController ()
+@interface SearchViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation SearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *orderTypes = [NSArray arrayWithObjects:@"date", @"rating", @"relevance", @"title", @"viewCount", nil];
+    self.ddmOrder.menuItems = orderTypes;
 }
 
 - (void)didReceiveMemoryWarning {

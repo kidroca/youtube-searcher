@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		6B3DFC0C1C635740009D96D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0B1C635740009D96D4 /* main.m */; };
 		6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0E1C635740009D96D4 /* AppDelegate.m */; };
-		6B3DFC121C635740009D96D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC111C635740009D96D4 /* FirstViewController.m */; };
+		6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC111C635740009D96D4 /* SearchViewController.m */; };
 		6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC141C635740009D96D4 /* SecondViewController.m */; };
 		6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC161C635740009D96D4 /* Main.storyboard */; };
 		6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC191C635740009D96D4 /* Assets.xcassets */; };
 		6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */; };
 		6B3DFC281C635740009D96D4 /* youtube_searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */; };
+		6B3DFC361C636AA9009D96D4 /* DropDownMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */; };
+		6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC401C637022009D96D4 /* DropDownMenu.m */; };
+		6B3DFC491C637FF1009D96D4 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC481C637FF1009D96D4 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +35,8 @@
 		6B3DFC0B1C635740009D96D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B3DFC0D1C635740009D96D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B3DFC0E1C635740009D96D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B3DFC101C635740009D96D4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		6B3DFC111C635740009D96D4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		6B3DFC101C635740009D96D4 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		6B3DFC111C635740009D96D4 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		6B3DFC131C635740009D96D4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		6B3DFC141C635740009D96D4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		6B3DFC171C635740009D96D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +46,11 @@
 		6B3DFC231C635740009D96D4 /* youtube-searcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "youtube-searcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = youtube_searcherTests.m; sourceTree = "<group>"; };
 		6B3DFC291C635740009D96D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownMenu.xib; sourceTree = "<group>"; };
+		6B3DFC3F1C637022009D96D4 /* DropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownMenu.h; sourceTree = "<group>"; };
+		6B3DFC401C637022009D96D4 /* DropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownMenu.m; sourceTree = "<group>"; };
+		6B3DFC471C637FF1009D96D4 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		6B3DFC481C637FF1009D96D4 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +92,10 @@
 		6B3DFC091C635740009D96D4 /* youtube-searcher */ = {
 			isa = PBXGroup;
 			children = (
+				6B3DFC341C6369C3009D96D4 /* Views */,
 				6B3DFC0D1C635740009D96D4 /* AppDelegate.h */,
 				6B3DFC0E1C635740009D96D4 /* AppDelegate.m */,
-				6B3DFC101C635740009D96D4 /* FirstViewController.h */,
-				6B3DFC111C635740009D96D4 /* FirstViewController.m */,
-				6B3DFC131C635740009D96D4 /* SecondViewController.h */,
-				6B3DFC141C635740009D96D4 /* SecondViewController.m */,
+				6B3DFC331C6369B1009D96D4 /* ViewControllers */,
 				6B3DFC161C635740009D96D4 /* Main.storyboard */,
 				6B3DFC191C635740009D96D4 /* Assets.xcassets */,
 				6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */,
@@ -114,6 +120,29 @@
 				6B3DFC291C635740009D96D4 /* Info.plist */,
 			);
 			path = "youtube-searcherTests";
+			sourceTree = "<group>";
+		};
+		6B3DFC331C6369B1009D96D4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DFC101C635740009D96D4 /* SearchViewController.h */,
+				6B3DFC111C635740009D96D4 /* SearchViewController.m */,
+				6B3DFC131C635740009D96D4 /* SecondViewController.h */,
+				6B3DFC141C635740009D96D4 /* SecondViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6B3DFC341C6369C3009D96D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */,
+				6B3DFC3F1C637022009D96D4 /* DropDownMenu.h */,
+				6B3DFC401C637022009D96D4 /* DropDownMenu.m */,
+				6B3DFC471C637FF1009D96D4 /* TableViewController.h */,
+				6B3DFC481C637FF1009D96D4 /* TableViewController.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +230,7 @@
 				6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */,
 				6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */,
 				6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */,
+				6B3DFC361C636AA9009D96D4 /* DropDownMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +248,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */,
+				6B3DFC491C637FF1009D96D4 /* TableViewController.m in Sources */,
 				6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */,
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
-				6B3DFC121C635740009D96D4 /* FirstViewController.m in Sources */,
+				6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */,
 				6B3DFC0C1C635740009D96D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +442,7 @@
 				6B3DFC2E1C635740009D96D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B3DFC2F1C635740009D96D4 /* Build configuration list for PBXNativeTarget "youtube-searcherTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +451,7 @@
 				6B3DFC311C635740009D96D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
