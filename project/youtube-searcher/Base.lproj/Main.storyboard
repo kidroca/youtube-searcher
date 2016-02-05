@@ -193,7 +193,13 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="ddSortOrder" destination="TLk-We-qB1" id="9UP-zt-BB3"/>
                         <outlet property="ddmOrder" destination="TLk-We-qB1" id="vce-QG-PJg"/>
+                        <outlet property="dpPublishedAfter" destination="QUt-aZ-cIa" id="634-hw-0RG"/>
+                        <outlet property="dpPublishedBefore" destination="Oav-Fa-M9l" id="fTh-Gl-ncz"/>
+                        <outlet property="swichHiDef" destination="3nz-wA-xb2" id="zTv-Fd-2Cc"/>
+                        <outlet property="tfMaxVideosCount" destination="MOO-HP-lzS" id="WaQ-Pq-XaO"/>
+                        <outlet property="tfSearchTerm" destination="sec-3r-fja" id="6b1-RV-IpF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

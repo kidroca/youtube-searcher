@@ -9,6 +9,12 @@
 #import "SearchViewController.h"
 
 @interface SearchViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *tfSearchTerm;
+@property (weak, nonatomic) IBOutlet UIDatePicker *dpPublishedAfter;
+@property (weak, nonatomic) IBOutlet UIDatePicker *dpPublishedBefore;
+@property (weak, nonatomic) IBOutlet UISwitch *swichHiDef;
+@property (weak, nonatomic) IBOutlet UITextField *tfMaxVideosCount;
+@property (weak, nonatomic) IBOutlet DropDownMenu *ddSortOrder;
 
 @end
 
@@ -18,7 +24,7 @@
     [super viewDidLoad];
     
     NSArray *orderTypes = [NSArray arrayWithObjects:@"date", @"rating", @"relevance", @"title", @"viewCount", nil];
-    self.ddmOrder.menuItems = orderTypes;
+    self.ddSortOrder.menuItems = orderTypes;
 }
 
 - (void)didReceiveMemoryWarning {

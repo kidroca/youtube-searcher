@@ -11,7 +11,5 @@
 
 @interface SearchViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet DropDownMenu *ddmOrder;
-
 @end
 
