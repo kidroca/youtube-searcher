@@ -17,7 +17,6 @@
 		6B3DFC281C635740009D96D4 /* youtube_searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */; };
 		6B3DFC361C636AA9009D96D4 /* DropDownMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */; };
 		6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC401C637022009D96D4 /* DropDownMenu.m */; };
-		6B3DFC491C637FF1009D96D4 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC481C637FF1009D96D4 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +48,6 @@
 		6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownMenu.xib; sourceTree = "<group>"; };
 		6B3DFC3F1C637022009D96D4 /* DropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownMenu.h; sourceTree = "<group>"; };
 		6B3DFC401C637022009D96D4 /* DropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownMenu.m; sourceTree = "<group>"; };
-		6B3DFC471C637FF1009D96D4 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		6B3DFC481C637FF1009D96D4 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +136,6 @@
 				6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */,
 				6B3DFC3F1C637022009D96D4 /* DropDownMenu.h */,
 				6B3DFC401C637022009D96D4 /* DropDownMenu.m */,
-				6B3DFC471C637FF1009D96D4 /* TableViewController.h */,
-				6B3DFC481C637FF1009D96D4 /* TableViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -249,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */,
-				6B3DFC491C637FF1009D96D4 /* TableViewController.m in Sources */,
 				6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */,
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
 				6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */,
