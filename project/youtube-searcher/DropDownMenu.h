@@ -18,7 +18,7 @@
 
 - (instancetype) initWithFrame:(CGRect)frame andMenuItems:(NSArray *)items;
 
-//- (id) getSelectedItem;
+- (id) getSelectedItem;
 
 + (instancetype) dropDownMenuWithFrame:(CGRect)frame andMenuItems:(NSArray *)items;
 

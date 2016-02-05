@@ -14,6 +14,7 @@ NSString *const REUSABLE_CELL_ID = @"reusableDropDownCell";
 
 @property(strong, nonatomic) UIView *viewWrapper;
 @property(strong, nonatomic) NSMutableArray *customConstraints;
+@property(strong, nonatomic) id selectedItem;
 
 @end
 
@@ -140,6 +141,12 @@ NSString *const REUSABLE_CELL_ID = @"reusableDropDownCell";
     [cell.textLabel setText:[menuItem description]];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedItem = [self.menuItems objectAtIndex:indexPath.row];
+    self.tvMenuTable.hidden = YES;
+    [self.btnSelect setTitle:[self.selectedItem description] forState:UIControlStateNormal];
 }
 
 @end
