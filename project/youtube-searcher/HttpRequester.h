@@ -21,12 +21,4 @@ andCompletionHandler:(void (^)(NSDictionary *__nullable dict)) handler;
 
 @interface HttpRequester : NSObject<SearcherHttpRequester>
 
-+ (instancetype) httpRequesterWithBaseUrl:(NSString *)baseUrl;
-
-- (instancetype) initWithBaseUrl:(NSString *)baseUrl;
-
-- (void) setQueryStringTo:(NSString *)query;
-
-- (void) addQueryItemWithValue:(NSString *)value forKey:(NSString *)key;
-
 @end

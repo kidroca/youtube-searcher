@@ -46,9 +46,11 @@ andCompletionHandler:(void (^)(NSDictionary * _Nullable))handler{
 }
 
 - (void) appendQuery:(id)query to:(NSURLComponents *)urlComponents{
+    NSLog(@"%@", [query class]);
+    
     if ([query isMemberOfClass:[NSString class]]) {
         [urlComponents setQuery: query];
-    } else if ([query isMemberOfClass:[NSURLQueryItem class]]) {
+    } else if ([query isKindOfClass:[NSArray class]]) {
         [urlComponents setQueryItems: query];
     }
 }
