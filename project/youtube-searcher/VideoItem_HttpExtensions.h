@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VideoItemResult";
+#import "VideoItemResult.h"
 
 extern NSString *const VIDEO_ID_PATH;
 extern NSString *const VIDEO_TITLE_PATH;

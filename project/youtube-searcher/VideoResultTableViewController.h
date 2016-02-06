@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PagedVideoCollection_HttpExtensions.h"
 
 @interface VideoResultTableViewController : UITableViewController
+
+
 
 @end

@@ -21,8 +21,9 @@
 
 + (instancetype) sharedHandler;
 
--(PagedVideoCollectionResult *) searchFor:(VideoQueryModel *)query;
+- (void)searchFor:(VideoQueryModel *)videoQuery withHandler:(void (^)(NSDictionary *__nullable dict)) handler;
 
--(PagedVideoCollectionResult *) getPageFor:(NSString *) pageToken;
+- (void)getPageFor:(NSString *) pageToken
+       withHandler:(void (^)(NSDictionary *__nullable dict)) handler;
 
 @end
