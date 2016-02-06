@@ -10,10 +10,12 @@
 
 @protocol SearcherHttpRequester
 
-- (void) setBaseUrlTo:(NSString *)urlString;
-- (void) setQueryStringWith:(NSArray<NSURLQueryItem*> *) queryItems;
-- (void) httpGetFrom:(NSString *)urlString;
-- (void) httpGetDefault;
+- (void) httpGetFrom:(NSString *)urlString
+andCompletionHandler:(void (^)(NSDictionary *__nullable dict))handler;
+
+- (void) httpGetFrom:(NSString *)urlString
+           withQuery:(NSArray<NSURLQueryItem*> *)queryItems
+andCompletionHandler:(void (^)(NSDictionary *__nullable dict)) handler;
 
 @end
 
