@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "HttpRequester.h"
 
 @interface SearchViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *tfSearchTerm;
@@ -43,13 +44,22 @@
 
 - (IBAction)onBtnReadyTap:(id)sender {
     [self fillQueryInformation];
-    NSString *queryString = [self.queryModel getQueryString];
+    NSMutableArray *queryItems = [self.queryModel getQueryItems];
+    
+    NSString *key = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.ApiCredentialsKey"];
+    NSString *urlString = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.YoutubeApiUrl"];
+    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"key" value:key]];
+    
+    HttpRequester *req = [[HttpRequester alloc] init];
+//    HttpRequester *req = [HttpRequester httpRequesterWithBaseUrl:urlString];
+    [req setQueryStringWith:queryItems];
+    [req httpGetFrom:urlString];
     // Go to result view
 }
 
 - (void) fillQueryInformation{
-    if(![self.queryModel.searchTearm isEqualToString: self.tfSearchTerm.text]){
-        self.queryModel.searchTearm = self.tfSearchTerm.text;
+    if(![self.queryModel.q isEqualToString: self.tfSearchTerm.text]){
+        self.queryModel.q = self.tfSearchTerm.text;
     }
     
     if (![self.queryModel.publishedAfter isEqualToDate: self.dpPublishedAfter.date]){
@@ -64,12 +74,13 @@
         self.queryModel.highDefinition = self.swichHiDef.selected;
     }
     
-    if (![self.queryModel.sortOrder isEqualToString:self.ddSortOrder.getSelectedItem]) {
-        self.queryModel.sortOrder = self.ddSortOrder.getSelectedItem;
+    if (self.ddSortOrder.getSelectedItem &&
+            ![self.queryModel.order isEqualToString:self.ddSortOrder.getSelectedItem]) {
+        self.queryModel.order = self.ddSortOrder.getSelectedItem;
     }
     
-    if (self.queryModel.maxVideosCount != self.stepperVideosCount.value) {
-        self.queryModel.maxVideosCount = self.stepperVideosCount.value;
+    if (self.queryModel.maxResults != self.stepperVideosCount.value) {
+        self.queryModel.maxResults = self.stepperVideosCount.value;
     }
 }
 
