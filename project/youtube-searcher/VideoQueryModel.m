@@ -26,7 +26,8 @@ static NSString *VIDEO_DEFINITION_QUERY_KEY = @"videoDefinition";
     if (self = [super init]) {
         
         [self configDateFormat];
-        [self configQueryItems];
+        self.queryItems = [[NSMutableArray alloc] init];
+        
         [self registerObservers];
     }
     
@@ -95,22 +96,6 @@ static NSString *VIDEO_DEFINITION_QUERY_KEY = @"videoDefinition";
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateFormat:dateFormat];
-}
-
--(void) configQueryItems{
-    self.queryItems = [[NSMutableArray alloc] init];
-    
-    // Add required query parameters
-    NSURLQueryItem *part = [NSURLQueryItem queryItemWithName:@"part" value:@"snippet"];
-    NSURLQueryItem *type = [NSURLQueryItem queryItemWithName:@"type" value:@"video"];
-    // Restriction to only include data fields of interest and reduce traffic
-    NSURLQueryItem *fields =
-    [NSURLQueryItem queryItemWithName:@"fields"
-                                value:@"items(id%2Csnippet)%2CnextPageToken%2CprevPageToken"];
-    
-    [self.queryItems addObject:part];
-    [self.queryItems addObject:type];
-    [self.queryItems addObject:fields];
 }
 
 -(void) registerObservers{
