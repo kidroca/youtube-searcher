@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "HttpRequester.h"
 
 @interface youtube_searcherTests : XCTestCase
 
@@ -24,9 +25,17 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testTextHttpRequesterGet {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSString *key = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.ApiCredentialsKey"];
+    NSString *urlString = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.YoutubeApiUrl"];
+    NSString *sampleQueryStr = [NSString stringWithFormat:@"part=snippet&q=computers&key=%@", key];
+    
+    HttpRequester *reqo = [[HttpRequester alloc] init];
+    [reqo setQueryStringTo:sampleQueryStr];
+    
+    [reqo httpGetFrom:urlString];
 }
 
 - (void)testPerformanceExample {
