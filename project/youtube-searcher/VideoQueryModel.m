@@ -20,8 +20,7 @@
 
 - (instancetype) init{
     if (self = [super init]) {
-        NSString *dateFormat = [[NSBundle mainBundle]
-                              objectForInfoDictionaryKey:@"AppConfig.DateFormat"];
+        NSString *dateFormat = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.DateFormat"];
         
         self.dateFormatter = [[NSDateFormatter alloc] init];
         [self.dateFormatter setDateFormat:dateFormat];
@@ -48,8 +47,9 @@
 
 - (NSString *)getQueryString{
     if (!self.queryString) {
-        NSMutableString *stringBuilder = [[NSMutableString alloc] init];
-        [stringBuilder appendFormat:@"q=%@", self.searchTearm];
+        NSMutableString *stringBuilder = [[NSMutableString alloc] initWithString:@"?part=snippet"];
+        
+        [stringBuilder appendFormat:@"&q=%@", self.searchTearm];
         
         if (self.publishedAfter) {
             NSString *afterDate = [self.dateFormatter stringFromDate:self.publishedAfter];

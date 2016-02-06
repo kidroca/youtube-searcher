@@ -10,17 +10,17 @@
 
 @interface VideoQueryModel : NSObject
 
-@property(strong, nonatomic, readonly) NSString *searchTearm;
+@property(strong, nonatomic) NSString *searchTearm;
 
-@property(strong, nonatomic, readonly) NSDate *publishedAfter;
+@property(strong, nonatomic) NSDate *publishedAfter;
 
-@property(strong, nonatomic, readonly) NSDate *publishedBefore;
+@property(strong, nonatomic) NSDate *publishedBefore;
 
-@property(nonatomic, readonly) BOOL highDefinition;
+@property(nonatomic) BOOL highDefinition;
 
-@property(nonatomic, readonly) NSInteger maxVideosCount;
+@property(nonatomic) NSInteger maxVideosCount;
 
-@property(strong, nonatomic, readonly) NSString *sortOrder;
+@property(strong, nonatomic) NSString *sortOrder;
 
 - (NSString *) getQueryString;
 
