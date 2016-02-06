@@ -28,10 +28,12 @@
 	<string>Main</string>
 	<key>AppConfig</key>
 	<dict>
+		<key>ApiCredentialsKey</key>
+		<string>AIzaSyDCHtrLhVVcSBOnp_6hQKDxDlF7duOTzVo</string>
 		<key>YoutubeApiUrl</key>
 		<string>https://www.googleapis.com/youtube/v3/search</string>
 		<key>DateFormat</key>
-		<string>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSSZZZ</string>
+		<string>yyyy&apos;-&apos;MM&apos;-&apos;dd&apos;T&apos;HH&apos;:&apos;mm&apos;:&apos;ss&apos;Z&apos;</string>
 	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
