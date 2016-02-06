@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B2D01151C6567030058B110 /* VideoQueryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D01141C6567030058B110 /* VideoQueryModel.m */; };
+		6B2D01191C6573BB0058B110 /* PropertyExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D01181C6573BB0058B110 /* PropertyExtractor.m */; };
 		6B3DFC0C1C635740009D96D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0B1C635740009D96D4 /* main.m */; };
 		6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0E1C635740009D96D4 /* AppDelegate.m */; };
 		6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC111C635740009D96D4 /* SearchViewController.m */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B2D01131C6567030058B110 /* VideoQueryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoQueryModel.h; sourceTree = "<group>"; };
+		6B2D01141C6567030058B110 /* VideoQueryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoQueryModel.m; sourceTree = "<group>"; };
+		6B2D01171C6573BB0058B110 /* PropertyExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyExtractor.h; sourceTree = "<group>"; };
+		6B2D01181C6573BB0058B110 /* PropertyExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyExtractor.m; sourceTree = "<group>"; };
 		6B3DFC071C635740009D96D4 /* youtube-searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3DFC0B1C635740009D96D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B3DFC0D1C635740009D96D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +74,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B2D01121C6566E10058B110 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B2D01131C6567030058B110 /* VideoQueryModel.h */,
+				6B2D01141C6567030058B110 /* VideoQueryModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6B2D01161C65738F0058B110 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6B2D01171C6573BB0058B110 /* PropertyExtractor.h */,
+				6B2D01181C6573BB0058B110 /* PropertyExtractor.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		6B3DFBFE1C635740009D96D4 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +113,8 @@
 		6B3DFC091C635740009D96D4 /* youtube-searcher */ = {
 			isa = PBXGroup;
 			children = (
+				6B2D01161C65738F0058B110 /* Helpers */,
+				6B2D01121C6566E10058B110 /* Models */,
 				6B3DFC341C6369C3009D96D4 /* Views */,
 				6B3DFC0D1C635740009D96D4 /* AppDelegate.h */,
 				6B3DFC0E1C635740009D96D4 /* AppDelegate.m */,
@@ -243,11 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2D01151C6567030058B110 /* VideoQueryModel.m in Sources */,
 				6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */,
 				6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */,
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
 				6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */,
 				6B3DFC0C1C635740009D96D4 /* main.m in Sources */,
+				6B2D01191C6573BB0058B110 /* PropertyExtractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

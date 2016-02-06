@@ -18,16 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Search" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5rF-re-1dj">
-                                <rect key="frame" x="109" y="20" width="158" height="38"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="wVJ-A0-yMf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-xg-3vX" userLabel="Content Wrapper">
                                 <rect key="frame" x="13" y="122" width="350" height="424"/>
                                 <subviews>
@@ -128,7 +118,7 @@
                                         <rect key="frame" x="0.0" y="249" width="350" height="29"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Videos:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bt-5s-SOi">
-                                                <rect key="frame" x="0.0" y="0.0" width="192" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="208" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="4SV-6b-Zf5"/>
                                                 </constraints>
@@ -141,16 +131,20 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOO-HP-lzS">
-                                                <rect key="frame" x="200" y="0.0" width="48" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egn-oA-yWP">
+                                                <rect key="frame" x="216" y="0.0" width="32" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="48" id="eiR-dF-zWZ"/>
+                                                    <constraint firstAttribute="width" constant="32" id="kaf-gr-kEn"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ats-ek-YFd">
                                                 <rect key="frame" x="256" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="onStepperValueChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="hVC-Ve-eO7"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -178,27 +172,54 @@
                                     <constraint firstItem="QUt-aZ-cIa" firstAttribute="height" secondItem="Wip-sZ-cLQ" secondAttribute="height" constant="-25" id="jgT-Ed-omd"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Search" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5rF-re-1dj">
+                                <rect key="frame" x="109" y="20" width="158" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="wVJ-A0-yMf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ji-QXS">
+                                <rect key="frame" x="137" y="566" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.62298845420727345" green="0.7335382452764968" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cba-Dz-FIB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <state key="normal" title="Ready">
+                                    <color key="titleColor" red="0.088511951263547176" green="0.019947096458836331" blue="0.28181089743589749" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="V8R-xg-3vX" firstAttribute="top" secondItem="5rF-re-1dj" secondAttribute="bottom" constant="64" id="0rr-Uf-h3g"/>
                             <constraint firstItem="5rF-re-1dj" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="93" id="15y-Lk-t0r"/>
                             <constraint firstItem="V8R-xg-3vX" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="IFh-29-aiP"/>
+                            <constraint firstItem="jJI-Ji-QXS" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="MbC-uU-nZo"/>
                             <constraint firstItem="5rF-re-1dj" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bXM-W0-BiU"/>
                             <constraint firstItem="5rF-re-1dj" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="fmC-Bd-MBb"/>
                             <constraint firstItem="V8R-xg-3vX" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-3" id="lHw-5f-mIB"/>
                             <constraint firstItem="V8R-xg-3vX" firstAttribute="centerX" secondItem="5rF-re-1dj" secondAttribute="centerX" id="o5H-Nq-yIL"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="jJI-Ji-QXS" secondAttribute="bottom" constant="10" id="z3i-gI-FsI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ddSortOrder" destination="TLk-We-qB1" id="9UP-zt-BB3"/>
-                        <outlet property="ddmOrder" destination="TLk-We-qB1" id="vce-QG-PJg"/>
                         <outlet property="dpPublishedAfter" destination="QUt-aZ-cIa" id="634-hw-0RG"/>
                         <outlet property="dpPublishedBefore" destination="Oav-Fa-M9l" id="fTh-Gl-ncz"/>
+                        <outlet property="lblVideosCount" destination="Egn-oA-yWP" id="UZ6-FI-GBV"/>
                         <outlet property="swichHiDef" destination="3nz-wA-xb2" id="zTv-Fd-2Cc"/>
-                        <outlet property="tfMaxVideosCount" destination="MOO-HP-lzS" id="WaQ-Pq-XaO"/>
                         <outlet property="tfSearchTerm" destination="sec-3r-fja" id="6b1-RV-IpF"/>
                     </connections>
                 </viewController>
