@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DropDownMenu.h"
+#import "VideoQueryModel.h"
 
 @interface SearchViewController : UIViewController
 
