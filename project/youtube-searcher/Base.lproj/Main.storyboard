@@ -106,7 +106,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-wA-xb2">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-wA-xb2">
                                                 <rect key="frame" x="301" y="0.0" width="51" height="34"/>
                                             </switch>
                                         </subviews>
@@ -197,6 +197,9 @@
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onBtnReadyTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nvw-u2-mce"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -219,6 +222,7 @@
                         <outlet property="dpPublishedAfter" destination="QUt-aZ-cIa" id="634-hw-0RG"/>
                         <outlet property="dpPublishedBefore" destination="Oav-Fa-M9l" id="fTh-Gl-ncz"/>
                         <outlet property="lblVideosCount" destination="Egn-oA-yWP" id="UZ6-FI-GBV"/>
+                        <outlet property="stepperVideosCount" destination="ats-ek-YFd" id="qsw-s8-sEq"/>
                         <outlet property="swichHiDef" destination="3nz-wA-xb2" id="zTv-Fd-2Cc"/>
                         <outlet property="tfSearchTerm" destination="sec-3r-fja" id="6b1-RV-IpF"/>
                     </connections>
