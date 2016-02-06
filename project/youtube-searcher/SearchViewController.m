@@ -13,8 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpPublishedAfter;
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpPublishedBefore;
 @property (weak, nonatomic) IBOutlet UISwitch *swichHiDef;
-@property (weak, nonatomic) IBOutlet UITextField *tfMaxVideosCount;
 @property (weak, nonatomic) IBOutlet DropDownMenu *ddSortOrder;
+@property (weak, nonatomic) IBOutlet UILabel *lblVideosCount;
 
 @end
 
@@ -27,9 +27,13 @@
     self.ddSortOrder.menuItems = orderTypes;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onStepperValueChange:(UIStepper *)stepper {
+    NSInteger val = stepper.value;
+    if(val > 0) {
+        [self.lblVideosCount setText:[NSString stringWithFormat:@"%ld", val]];
+    } else {
+        [self.lblVideosCount setText:@"max"];
+    }
 }
 
 @end
