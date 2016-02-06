@@ -28,6 +28,8 @@
 	<string>Main</string>
 	<key>AppConfig</key>
 	<dict>
+		<key>YoutubeVideoUrlPattern</key>
+		<string>https://www.youtube.com/watch?v=%@</string>
 		<key>ApiCredentialsKey</key>
 		<string>AIzaSyDCHtrLhVVcSBOnp_6hQKDxDlF7duOTzVo</string>
 		<key>YoutubeApiUrl</key>

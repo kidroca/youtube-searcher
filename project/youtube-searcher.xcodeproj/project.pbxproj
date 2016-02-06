@@ -67,6 +67,8 @@
 		6B890DB41C664EBC00551FFF /* VideoItemResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItemResult.m; sourceTree = "<group>"; };
 		6B890DB61C66525900551FFF /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		6B890DB71C66525900551FFF /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		6B890DBA1C6661E200551FFF /* VideoItem_HttpExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoItem_HttpExtensions.h; sourceTree = "<group>"; };
+		6B890DBB1C66661800551FFF /* PagedVideoCollection_HttpExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedVideoCollection_HttpExtensions.h; sourceTree = "<group>"; };
 		6BF84EFE1C65F11F00C8DE59 /* HttpRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequester.h; sourceTree = "<group>"; };
 		6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequester.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 		6B890DAD1C664DE500551FFF /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				6B890DB91C66612B00551FFF /* Extensions */,
 				6B890DAA1C664D0400551FFF /* PagedVideoCollectionResult.h */,
 				6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */,
 				6B890DAF1C664E1F00551FFF /* PageInfo.h */,
@@ -202,6 +205,15 @@
 				6B2D01141C6567030058B110 /* VideoQueryModel.m */,
 			);
 			name = Request;
+			sourceTree = "<group>";
+		};
+		6B890DB91C66612B00551FFF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B890DBA1C6661E200551FFF /* VideoItem_HttpExtensions.h */,
+				6B890DBB1C66661800551FFF /* PagedVideoCollection_HttpExtensions.h */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		6BF84EFD1C65F0D900C8DE59 /* Data */ = {
