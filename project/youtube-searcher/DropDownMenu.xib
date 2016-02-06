@@ -31,7 +31,7 @@
                 </tableView>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djl-Go-Ecl">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
-                    <color key="backgroundColor" red="0.99012595415115356" green="0.35369789600372314" blue="0.01196406502276659" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.95686274509803926" green="0.16470588235294117" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="aie-mB-Hyr"/>
                     </constraints>
@@ -61,7 +61,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="325" y="100"/>
+            <point key="canvasLocation" x="413" y="103"/>
         </view>
     </objects>
 </document>
