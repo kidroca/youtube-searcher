@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AppConfig</key>
-	<dict>
-		<key>DateFormat</key>
-		<string>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSSZZZ</string>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -31,6 +26,13 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>AppConfig</key>
+	<dict>
+		<key>YoutubeApiUrl</key>
+		<string>https://www.googleapis.com/youtube/v3/search</string>
+		<key>DateFormat</key>
+		<string>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSSZZZ</string>
+	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
