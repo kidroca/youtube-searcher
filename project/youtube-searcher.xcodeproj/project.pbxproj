@@ -22,6 +22,7 @@
 		6B890DAC1C664D0400551FFF /* PagedVideoCollectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */; };
 		6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB01C664E1F00551FFF /* PageInfo.m */; };
 		6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB41C664EBC00551FFF /* VideoItemResult.m */; };
+		6B890DB81C66525900551FFF /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB71C66525900551FFF /* DataHandler.m */; };
 		6BF84F001C65F11F00C8DE59 /* HttpRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		6B890DB01C664E1F00551FFF /* PageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageInfo.m; sourceTree = "<group>"; };
 		6B890DB31C664EBC00551FFF /* VideoItemResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoItemResult.h; sourceTree = "<group>"; };
 		6B890DB41C664EBC00551FFF /* VideoItemResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItemResult.m; sourceTree = "<group>"; };
+		6B890DB61C66525900551FFF /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		6B890DB71C66525900551FFF /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		6BF84EFE1C65F11F00C8DE59 /* HttpRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequester.h; sourceTree = "<group>"; };
 		6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequester.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +209,8 @@
 			children = (
 				6BF84EFE1C65F11F00C8DE59 /* HttpRequester.h */,
 				6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */,
+				6B890DB61C66525900551FFF /* DataHandler.h */,
+				6B890DB71C66525900551FFF /* DataHandler.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				6B2D01151C6567030058B110 /* VideoQueryModel.m in Sources */,
 				6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */,
 				6BF84F001C65F11F00C8DE59 /* HttpRequester.m in Sources */,
+				6B890DB81C66525900551FFF /* DataHandler.m in Sources */,
 				6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */,
 				6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */,
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,

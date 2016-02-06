@@ -8,22 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HttpRequester : NSObject
+@protocol SearcherHttpRequester
+
+- (void) setBaseUrlTo:(NSString *)urlString;
+- (void) setQueryStringWith:(NSArray<NSURLQueryItem*> *) queryItems;
+- (void) httpGetFrom:(NSString *)urlString;
+- (void) httpGetDefault;
+
+@end
+
+@interface HttpRequester : NSObject<SearcherHttpRequester>
 
 + (instancetype) httpRequesterWithBaseUrl:(NSString *)baseUrl;
 
 - (instancetype) initWithBaseUrl:(NSString *)baseUrl;
 
-- (void) setBaseUrlTo:(NSString *)urlString;
-
 - (void) setQueryStringTo:(NSString *)query;
 
-- (void) setQueryStringWith:(NSArray<NSURLQueryItem*> *) queryItems;
-
 - (void) addQueryItemWithValue:(NSString *)value forKey:(NSString *)key;
-
-- (void) httpGetFrom:(NSString *)urlString;
-
-- (void) httpGetDefault;
 
 @end
