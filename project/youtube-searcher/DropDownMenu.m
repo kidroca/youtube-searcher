@@ -111,7 +111,7 @@ NSString *const REUSABLE_CELL_ID = @"reusableDropDownCell";
 }
 
 - (id) getSelectedItem{
-    return nil;
+    return self.selectedItem;
 }
 
 - (IBAction)onSelectButtonTap:(UIButton *)sender {
