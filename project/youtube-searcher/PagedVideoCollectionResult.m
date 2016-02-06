@@ -8,6 +8,28 @@
 
 #import "PagedVideoCollectionResult.h"
 
+NSString *const NEXT_PAGE_PATH = @"nextPageToken";
+NSString *const PREV_PAGE_PATH = @"prevPageToken";
+NSString *const VIDEO_COLLECTION_PATH = @"items";
+NSString *const PAGE_INFO_PATH = @"pageInfo";
+
 @implementation PagedVideoCollectionResult
+
++(instancetype) pagedCollectionWithDict:(NSDictionary *)dict{
+    PagedVideoCollectionResult *page = [[self alloc] init];
+    page.prevPageToken = [dict valueForKeyPath:PREV_PAGE_PATH];
+    page.nextPageToken = [dict valueForKeyPath:NEXT_PAGE_PATH];
+    
+    NSMutableArray *videos = [NSMutableArray array];
+    NSArray *items = [dict valueForKeyPath:VIDEO_COLLECTION_PATH];
+    for (id item in items) {
+        VideoItemResult *video = [VideoItemResult videoWithDict:item];
+        [videos addObject:video];
+    }
+    
+    page.items = [NSArray arrayWithArray:videos];
+    
+    return page;
+}
 
 @end

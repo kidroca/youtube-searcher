@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PageInfo.h"
 #import "VideoItemResult.h"
+#import "VideoItem_HttpExtensions.h"
 
 @interface PagedVideoCollectionResult : NSObject
 

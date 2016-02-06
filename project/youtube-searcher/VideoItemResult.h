@@ -15,4 +15,14 @@
 @property(strong, nonatomic) NSString *videoDescription;
 @property(strong, nonatomic) NSString *thumbnailUrl;
 
+-(instancetype)initWithVideoId:(NSString *)videoId
+                         title:(NSString *)title
+                   description:(NSString *)description
+               andThumbnailUrl:(NSString *) thumbnailUrl;
+
++(instancetype)videoWithVideoId:(NSString *)videoId
+                          title:(NSString *)title
+                    description:(NSString *)description
+                andThumbnailUrl:(NSString *) thumbnailUrl;
+
 @end
