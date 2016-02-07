@@ -5,11 +5,11 @@
 //  Created by Peter Velkov on 2/4/16.
 //  Copyright © 2016 Peter Velkov. All rights reserved.
 //
-
+	
 #import "SearchViewController.h"
 #import "DataHandler.h"
 #import "PagedVideoCollection_HttpExtensions.h"
-#import "VideoResultTableViewController.h"
+#import "youtube_searcher-Swift.h"
 
 @interface SearchViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblSearch;
@@ -71,6 +71,7 @@ static NSString *videoResultControllerId = @"videoResultControllerId";
 
     VideoResultTableViewController *resultsVC =
     [self.storyboard instantiateViewControllerWithIdentifier:videoResultControllerId];
+    [self.navigationController pushViewController:resultsVC animated:YES];
     
     [[DataHandler sharedHandler] searchFor:self.queryModel
                                withHandler:^(NSDictionary * _Nullable dict) {
@@ -79,11 +80,10 @@ static NSString *videoResultControllerId = @"videoResultControllerId";
                                    [PagedVideoCollectionResult pagedCollectionWithDict:dict];
                                    NSLog(@"%@", videos);
                                    
-                                   resultsVC.videoCollection = videos;
-                                   [resultsVC.tableView reloadData];
+                                   [resultsVC assignVideoCollection:videos];
                                }];
     
-    [self.navigationController pushViewController:resultsVC animated:YES];
+    
 }
 
 - (void) fillQueryInformation{

@@ -11,7 +11,7 @@
 NSString *const VIDEO_ID_PATH = @"videoId";
 NSString *const VIDEO_TITLE_PATH = @"snippet.title";
 NSString *const VIDEO_DESCRIPION_PATH = @"snippet.description";
-NSString *const VIDEO_THUMBNAIL_PATH = @"snippet.thumbnails.medium.url";
+NSString *const VIDEO_THUMBNAIL_PATH = @"snippet.thumbnails.high.url";
 
 @implementation VideoItemResult{
     NSString *_urlPattern;
