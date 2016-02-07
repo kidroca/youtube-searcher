@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "PagedVideoCollection_HttpExtensions.h"
+#import "DataHandler.h"
 
 @interface VideoResultTableViewController : UITableViewController
 
-
+@property(strong, nonatomic) PagedVideoCollectionResult *videoCollection;
 
 @end

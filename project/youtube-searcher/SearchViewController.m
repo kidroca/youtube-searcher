@@ -7,7 +7,9 @@
 //
 
 #import "SearchViewController.h"
-#import "HttpRequester.h"
+#import "DataHandler.h"
+#import "PagedVideoCollection_HttpExtensions.h"
+#import "VideoResultTableViewController.h"
 
 @interface SearchViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *tfSearchTerm;
@@ -16,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *swichHiDef;
 @property (weak, nonatomic) IBOutlet DropDownMenu *ddSortOrder;
 @property (weak, nonatomic) IBOutlet UILabel *lblVideosCount;
-@property (weak, nonatomic) IBOutlet UIStepper *stepperVideosCount;
 
 @property (strong, nonatomic) VideoQueryModel *queryModel;
 
@@ -24,8 +25,12 @@
 
 @implementation SearchViewController
 
+static NSString *videoResultControllerId = @"videoResultControllerId";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setTitle:@"Search Videos"];
     
     self.queryModel = [[VideoQueryModel alloc] init];
     
@@ -33,28 +38,24 @@
     self.ddSortOrder.menuItems = orderTypes;
 }
 
-- (IBAction)onStepperValueChange:(UIStepper *)stepper {
-    NSInteger val = stepper.value;
-    if(val > 0) {
-        [self.lblVideosCount setText:[NSString stringWithFormat:@"%ld", val]];
-    } else {
-        [self.lblVideosCount setText:@"max"];
-    }
-}
-
 - (IBAction)onBtnReadyTap:(id)sender {
     [self fillQueryInformation];
-    NSMutableArray *queryItems = [self.queryModel getQueryItems];
+
+    VideoResultTableViewController *resultsVC =
+    [self.storyboard instantiateViewControllerWithIdentifier:videoResultControllerId];
     
-    NSString *key = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.ApiCredentialsKey"];
-    NSString *urlString = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.YoutubeApiUrl"];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"key" value:key]];
+    [[DataHandler sharedHandler] searchFor:self.queryModel
+                               withHandler:^(NSDictionary * _Nullable dict) {
+                                   
+                                   PagedVideoCollectionResult *videos =
+                                   [PagedVideoCollectionResult pagedCollectionWithDict:dict];
+                                   NSLog(@"%@", videos);
+                                   
+                                   resultsVC.videoCollection = videos;
+                                   [resultsVC.tableView reloadData];
+                               }];
     
-    HttpRequester *req = [[HttpRequester alloc] init];
-//    HttpRequester *req = [HttpRequester httpRequesterWithBaseUrl:urlString];
-    [req setQueryStringWith:queryItems];
-    [req httpGetFrom:urlString];
-    // Go to result view
+    [self.navigationController pushViewController:resultsVC animated:YES];
 }
 
 - (void) fillQueryInformation{
@@ -75,7 +76,7 @@
     }
     
     if (self.ddSortOrder.getSelectedItem &&
-            ![self.queryModel.order isEqualToString:self.ddSortOrder.getSelectedItem]) {
+        ![self.queryModel.order isEqualToString:self.ddSortOrder.getSelectedItem]) {
         self.queryModel.order = self.ddSortOrder.getSelectedItem;
     }
     
