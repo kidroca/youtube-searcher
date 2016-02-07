@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PageInfo.h"
+#import "PageInfo.h"	
 #import "VideoItemResult.h"
 #import "VideoItem_HttpExtensions.h"
 
@@ -16,6 +16,6 @@
 @property(strong, nonatomic) NSString *nextPageToken;
 @property(strong, nonatomic) NSString *prevPageToken;
 @property(strong, nonatomic) PageInfo *pageInfo;
-@property(strong, nonatomic) NSArray<VideoItemResult *> *items;
+@property(strong, nonatomic) NSMutableArray<VideoItemResult *> *items;
 
 @end

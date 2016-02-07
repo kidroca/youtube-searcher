@@ -15,6 +15,14 @@ NSString *const PAGE_INFO_PATH = @"pageInfo";
 
 @implementation PagedVideoCollectionResult
 
+-(instancetype)init{
+    if (self = [super init]) {
+        self.items = [NSMutableArray array];
+    }
+    
+    return self;
+}
+
 +(instancetype) pagedCollectionWithDict:(NSDictionary *)dict{
     PagedVideoCollectionResult *page = [[self alloc] init];
     page.prevPageToken = [dict valueForKeyPath:PREV_PAGE_PATH];
@@ -27,7 +35,7 @@ NSString *const PAGE_INFO_PATH = @"pageInfo";
         [videos addObject:video];
     }
     
-    page.items = [NSArray arrayWithArray:videos];
+    page.items = videos;
     
     return page;
 }
