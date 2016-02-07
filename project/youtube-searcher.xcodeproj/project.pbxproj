@@ -19,12 +19,14 @@
 		6B3DFC281C635740009D96D4 /* youtube_searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */; };
 		6B3DFC361C636AA9009D96D4 /* DropDownMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */; };
 		6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC401C637022009D96D4 /* DropDownMenu.m */; };
+		6B436D241C67B69F0043828C /* VideoResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B436D231C67B69F0043828C /* VideoResultCell.xib */; };
+		6B436D2A1C67B7DE0043828C /* VideoResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D291C67B7DE0043828C /* VideoResultCell.swift */; };
+		6B436D2C1C67C1530043828C /* VideoResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D2B1C67C1530043828C /* VideoResultTableViewController.swift */; };
 		6B890DAC1C664D0400551FFF /* PagedVideoCollectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */; };
 		6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB01C664E1F00551FFF /* PageInfo.m */; };
 		6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB41C664EBC00551FFF /* VideoItemResult.m */; };
 		6B890DB81C66525900551FFF /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB71C66525900551FFF /* DataHandler.m */; };
 		6B890DBE1C66741A00551FFF /* AppStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DBD1C66741A00551FFF /* AppStart.m */; };
-		6BC82DB21C6694910034621F /* VideoResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC82DB11C6694910034621F /* VideoResultTableViewController.m */; };
 		6BF84F001C65F11F00C8DE59 /* HttpRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,10 @@
 		6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownMenu.xib; sourceTree = "<group>"; };
 		6B3DFC3F1C637022009D96D4 /* DropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownMenu.h; sourceTree = "<group>"; };
 		6B3DFC401C637022009D96D4 /* DropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownMenu.m; sourceTree = "<group>"; };
+		6B436D231C67B69F0043828C /* VideoResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoResultCell.xib; sourceTree = "<group>"; };
+		6B436D281C67B7DE0043828C /* youtube-searcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "youtube-searcher-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B436D291C67B7DE0043828C /* VideoResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResultCell.swift; sourceTree = "<group>"; };
+		6B436D2B1C67C1530043828C /* VideoResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResultTableViewController.swift; sourceTree = "<group>"; };
 		6B890DAA1C664D0400551FFF /* PagedVideoCollectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedVideoCollectionResult.h; sourceTree = "<group>"; };
 		6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedVideoCollectionResult.m; sourceTree = "<group>"; };
 		6B890DAF1C664E1F00551FFF /* PageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageInfo.h; sourceTree = "<group>"; };
@@ -73,8 +79,6 @@
 		6B890DBB1C66661800551FFF /* PagedVideoCollection_HttpExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedVideoCollection_HttpExtensions.h; sourceTree = "<group>"; };
 		6B890DBC1C66741A00551FFF /* AppStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStart.h; sourceTree = "<group>"; };
 		6B890DBD1C66741A00551FFF /* AppStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStart.m; sourceTree = "<group>"; };
-		6BC82DB01C6694910034621F /* VideoResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoResultTableViewController.h; sourceTree = "<group>"; };
-		6BC82DB11C6694910034621F /* VideoResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoResultTableViewController.m; sourceTree = "<group>"; };
 		6BF84EFE1C65F11F00C8DE59 /* HttpRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequester.h; sourceTree = "<group>"; };
 		6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequester.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +161,7 @@
 		6B3DFC0A1C635740009D96D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B436D281C67B7DE0043828C /* youtube-searcher-Bridging-Header.h */,
 				6B3DFC0B1C635740009D96D4 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -178,8 +183,7 @@
 				6B3DFC111C635740009D96D4 /* SearchViewController.m */,
 				6B3DFC131C635740009D96D4 /* SecondViewController.h */,
 				6B3DFC141C635740009D96D4 /* SecondViewController.m */,
-				6BC82DB01C6694910034621F /* VideoResultTableViewController.h */,
-				6BC82DB11C6694910034621F /* VideoResultTableViewController.m */,
+				6B436D2B1C67C1530043828C /* VideoResultTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -187,11 +191,29 @@
 		6B3DFC341C6369C3009D96D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B436D271C67B78F0043828C /* VideoResultCell */,
+				6B436D261C67B7810043828C /* DropDownMenu */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6B436D261C67B7810043828C /* DropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
 				6B3DFC351C636AA9009D96D4 /* DropDownMenu.xib */,
 				6B3DFC3F1C637022009D96D4 /* DropDownMenu.h */,
 				6B3DFC401C637022009D96D4 /* DropDownMenu.m */,
 			);
-			name = Views;
+			name = DropDownMenu;
+			sourceTree = "<group>";
+		};
+		6B436D271C67B78F0043828C /* VideoResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				6B436D231C67B69F0043828C /* VideoResultCell.xib */,
+				6B436D291C67B7DE0043828C /* VideoResultCell.swift */,
+			);
+			name = VideoResultCell;
 			sourceTree = "<group>";
 		};
 		6B890DAD1C664DE500551FFF /* Response */ = {
@@ -320,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */,
+				6B436D241C67B69F0043828C /* VideoResultCell.xib in Resources */,
 				6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */,
 				6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */,
 				6B3DFC361C636AA9009D96D4 /* DropDownMenu.xib in Resources */,
@@ -350,7 +373,8 @@
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
 				6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */,
 				6B3DFC0C1C635740009D96D4 /* main.m in Sources */,
-				6BC82DB21C6694910034621F /* VideoResultTableViewController.m in Sources */,
+				6B436D2A1C67B7DE0043828C /* VideoResultCell.swift in Sources */,
+				6B436D2C1C67C1530043828C /* VideoResultTableViewController.swift in Sources */,
 				6B890DBE1C66741A00551FFF /* AppStart.m in Sources */,
 				6B2D01191C6573BB0058B110 /* PropertyExtractor.m in Sources */,
 				6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */,
@@ -481,10 +505,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "youtube-searcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.youtube-searcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "youtube-searcher/youtube-searcher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -492,10 +519,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "youtube-searcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.youtube-searcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "youtube-searcher/youtube-searcher-Bridging-Header.h";
 			};
 			name = Release;
 		};
