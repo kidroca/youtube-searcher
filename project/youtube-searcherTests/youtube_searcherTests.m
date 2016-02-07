@@ -30,12 +30,17 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     NSString *key = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.ApiCredentialsKey"];
     NSString *urlString = [[[NSBundle mainBundle] infoDictionary] valueForKeyPath:@"AppConfig.YoutubeApiUrl"];
-    NSString *sampleQueryStr = [NSString stringWithFormat:@"part=snippet&q=computers&key=%@", key];
+    
+    NSURLComponents *urlComponents = [NSURLComponents componentsWithString:urlString];
+    
+    NSArray *query = @[[NSURLQueryItem queryItemWithName:@"key" value:key],
+                       [NSURLQueryItem queryItemWithName:@"part" value:@"snippet"],
+                       [NSURLQueryItem queryItemWithName:@"q" value:@"computers"]];
     
     HttpRequester *reqo = [[HttpRequester alloc] init];
-    [reqo setQueryStringTo:sampleQueryStr];
-    
-    [reqo httpGetFrom:urlString];
+    [reqo httpGetFrom:urlString withQuery:query andCompletionHandler:^(NSDictionary * _Nullable dict) {
+        NSLog(@"Request data: %@", dict);
+    }];
 }
 
 - (void)testPerformanceExample {
