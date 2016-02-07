@@ -16,8 +16,31 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="248"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djl-Go-Ecl">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
+                    <color key="backgroundColor" red="0.95686274509803926" green="0.16470588235294117" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="58" id="BFp-21-lt0"/>
+                        <constraint firstAttribute="height" constant="58" id="LZa-B9-LCW"/>
+                        <constraint firstAttribute="height" constant="40" id="aie-mB-Hyr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                    <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                    <state key="normal" title="order by">
+                        <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="BFp-21-lt0"/>
+                            <exclude reference="aie-mB-Hyr"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="onSelectButtonTap:" destination="-1" eventType="touchUpInside" id="JPB-qW-EeM"/>
+                    </connections>
+                </button>
                 <tableView hidden="YES" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" style="plain" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vWl-qE-PDE">
-                    <rect key="frame" x="0.0" y="48" width="600" height="200"/>
+                    <rect key="frame" x="0.0" y="58" width="600" height="190"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="separatorColor" red="0.95686274509803926" green="0.16470588235294117" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,40 +52,31 @@
                         <outlet property="delegate" destination="-1" id="cNX-IR-uUk"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djl-Go-Ecl">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
-                    <color key="backgroundColor" red="0.95686274509803926" green="0.16470588235294117" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="aie-mB-Hyr"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                    <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
-                    <state key="normal" title="Select">
-                        <color key="titleColor" red="0.93330544233322144" green="0.91548162698745728" blue="0.6891670823097229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="onSelectButtonTap:" destination="-1" eventType="touchUpInside" id="JPB-qW-EeM"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="Djl-Go-Ecl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0xg-Bs-Gqp"/>
                 <constraint firstItem="Djl-Go-Ecl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="58B-lO-IDt"/>
-                <constraint firstAttribute="bottom" secondItem="vWl-qE-PDE" secondAttribute="bottom" id="6bn-CC-rxn"/>
-                <constraint firstItem="vWl-qE-PDE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7Fd-ex-LPN"/>
-                <constraint firstItem="Djl-Go-Ecl" firstAttribute="trailing" secondItem="vWl-qE-PDE" secondAttribute="trailing" id="Dtm-fQ-VcV"/>
-                <constraint firstItem="Djl-Go-Ecl" firstAttribute="leading" secondItem="vWl-qE-PDE" secondAttribute="leading" id="YAb-Q5-bi2"/>
-                <constraint firstItem="vWl-qE-PDE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gEl-kE-v17"/>
+                <constraint firstItem="vWl-qE-PDE" firstAttribute="leading" secondItem="Djl-Go-Ecl" secondAttribute="leading" id="7vS-VH-bne"/>
+                <constraint firstItem="vWl-qE-PDE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AV8-Qt-IWT"/>
+                <constraint firstItem="vWl-qE-PDE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="P4v-wu-Yf6"/>
+                <constraint firstItem="vWl-qE-PDE" firstAttribute="top" secondItem="Djl-Go-Ecl" secondAttribute="bottom" id="Ume-if-XhU"/>
+                <constraint firstAttribute="bottom" secondItem="vWl-qE-PDE" secondAttribute="bottom" id="dOJ-d8-vPh"/>
                 <constraint firstItem="Djl-Go-Ecl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mCB-KR-SlU"/>
-                <constraint firstItem="vWl-qE-PDE" firstAttribute="top" secondItem="Djl-Go-Ecl" secondAttribute="bottom" constant="8" symbolic="YES" id="mnS-pf-Hir"/>
+                <constraint firstItem="vWl-qE-PDE" firstAttribute="trailing" secondItem="Djl-Go-Ecl" secondAttribute="trailing" id="vBz-wt-1jz"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="413" y="103"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="mCB-KR-SlU"/>
+                    <exclude reference="P4v-wu-Yf6"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="438" y="103"/>
         </view>
     </objects>
 </document>

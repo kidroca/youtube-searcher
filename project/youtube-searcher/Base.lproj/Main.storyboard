@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-xg-3vX" userLabel="Content Wrapper">
-                                <rect key="frame" x="5" y="129" width="365" height="409"/>
+                                <rect key="frame" x="5" y="129" width="365" height="395"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wip-sZ-cLQ" userLabel="Text Search Term">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="56"/>
@@ -57,12 +57,15 @@
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-aZ-cIa">
                                                 <rect key="frame" x="0.0" y="18" width="365" height="58"/>
                                                 <color key="backgroundColor" red="0.19607843137254902" green="0.36470588235294116" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                                <date key="date" timeIntervalSinceReferenceDate="473596111.92787898">
-                                                    <!--2016-01-04 10:28:31 +0000-->
+                                                <date key="date" timeIntervalSinceReferenceDate="-63118799.072121024">
+                                                    <!--1999-01-01 11:00:00 +0000-->
                                                 </date>
                                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-63118800">
                                                     <!--1999-01-01 11:00:00 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="onDpPublishedAfterValueChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="3fw-6R-7fB"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <constraints>
@@ -89,6 +92,12 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="476274511.92787898">
                                                     <!--2016-02-04 10:28:31 +0000-->
                                                 </date>
+                                                <date key="minimumDate" timeIntervalSinceReferenceDate="-63118800">
+                                                    <!--1999-01-01 11:00:00 +0000-->
+                                                </date>
+                                                <connections>
+                                                    <action selector="onDpPublishedBeforeValueChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="1Qg-h2-bWb"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <constraints>
@@ -115,6 +124,8 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-wA-xb2">
                                                 <rect key="frame" x="316" y="0.0" width="51" height="32"/>
+                                                <color key="onTintColor" red="0.14509803921568629" green="0.32549019607843138" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="thumbTintColor" red="0.92941176470588238" green="0.058823529411764705" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -122,7 +133,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZY7-mk-lcC" userLabel="DropDown Sort Order">
-                                        <rect key="frame" x="0.0" y="272" width="365" height="137"/>
+                                        <rect key="frame" x="0.0" y="272" width="365" height="123"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sort order:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-Li-ZIg">
                                                 <rect key="frame" x="0.0" y="0.0" width="87" height="18"/>
@@ -131,7 +142,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLk-We-qB1" customClass="DropDownMenu">
-                                                <rect key="frame" x="0.0" y="18" width="365" height="119"/>
+                                                <rect key="frame" x="0.0" y="18" width="365" height="105"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
@@ -146,8 +157,8 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ji-QXS">
-                                <rect key="frame" x="5" y="566" width="365" height="44"/>
-                                <color key="backgroundColor" red="0.19607843137254902" green="0.36470588235294116" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="5" y="552" width="365" height="58"/>
+                                <color key="backgroundColor" red="0.21176470588235294" green="0.46666666666666667" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                 <state key="normal" title="Ready">
                                     <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,6 +177,7 @@
                         <color key="tintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jJI-Ji-QXS" firstAttribute="leading" secondItem="V8R-xg-3vX" secondAttribute="leading" id="D0Q-ex-mT6"/>
+                            <constraint firstItem="jJI-Ji-QXS" firstAttribute="height" secondItem="Oav-Fa-M9l" secondAttribute="height" id="DVF-Xt-o5M"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="jJI-Ji-QXS" secondAttribute="bottom" constant="8" symbolic="YES" id="Zvo-VN-EPT"/>
                             <constraint firstItem="V8R-xg-3vX" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-11" id="f4a-NS-rn7"/>
                             <constraint firstItem="jJI-Ji-QXS" firstAttribute="top" secondItem="V8R-xg-3vX" secondAttribute="bottom" constant="28" id="fo8-ig-dvW"/>
@@ -177,9 +189,11 @@
                     <navigationItem key="navigationItem" id="c2I-fm-VGc"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="btnReady" destination="jJI-Ji-QXS" id="PfQ-0w-E56"/>
                         <outlet property="ddSortOrder" destination="TLk-We-qB1" id="9UP-zt-BB3"/>
                         <outlet property="dpPublishedAfter" destination="QUt-aZ-cIa" id="634-hw-0RG"/>
                         <outlet property="dpPublishedBefore" destination="Oav-Fa-M9l" id="fTh-Gl-ncz"/>
+                        <outlet property="lblSearch" destination="ico-VW-fY8" id="g7I-tm-7mw"/>
                         <outlet property="swichHiDef" destination="3nz-wA-xb2" id="zTv-Fd-2Cc"/>
                         <outlet property="tfSearchTerm" destination="sec-3r-fja" id="6b1-RV-IpF"/>
                     </connections>

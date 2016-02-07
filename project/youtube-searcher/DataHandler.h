@@ -17,6 +17,8 @@
 
 - (void)setApiKey:(NSString *)apiKey;
 
+- (NSArray *)getResultOrders;
+
 - (void)setHttpRequester:(NSObject<SearcherHttpRequester> *)httpRequester;
 
 + (instancetype) sharedHandler;

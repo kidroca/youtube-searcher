@@ -40,6 +40,13 @@
     _requester = httpRequester;
 }
 
+-(NSArray *)getResultOrders{
+    NSArray *orderTypes =
+    [NSArray arrayWithObjects:@"date", @"rating", @"relevance", @"title", @"viewCount", nil];
+    
+    return orderTypes;
+}
+
 -(void)searchFor:(VideoQueryModel *)videoQuery withHandler:(void (^)(NSDictionary * _Nullable))handler{
     NSMutableArray *query = [self getQueryWithDefaultParameters];
     
