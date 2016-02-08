@@ -80,10 +80,11 @@ static NSString *videoResultControllerId = @"videoResultControllerId";
                                    [PagedVideoCollectionResult pagedCollectionWithDict:dict];
                                    NSLog(@"%@", videos);
                                    
-                                   [resultsVC assignVideoCollection:videos];
+                                    // Execute from the Main thread
+                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                       [resultsVC assignVideoCollection:videos];
+                                   });	
                                }];
-    
-    
 }
 
 - (void) fillQueryInformation{

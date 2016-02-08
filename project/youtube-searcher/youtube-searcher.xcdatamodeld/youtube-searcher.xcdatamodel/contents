@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10118.6" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="Collection" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" minValueString="2" maxValueString="200" syncable="YES"/>
+        <relationship name="videos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Video" inverseName="collection" inverseEntity="Video" syncable="YES"/>
+    </entity>
+    <entity name="Video" syncable="YES">
+        <attribute name="thumnailData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" minValueString="2" maxValueString="250" syncable="YES"/>
+        <attribute name="videoDescription" optional="YES" attributeType="String" maxValueString="800" syncable="YES"/>
+        <attribute name="videoUrl" optional="YES" attributeType="String" minValueString="5" maxValueString="300" syncable="YES"/>
+        <attribute name="youtubeId" optional="YES" attributeType="String" minValueString="1" maxValueString="100" syncable="YES"/>
+        <relationship name="collection" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Collection" inverseName="videos" inverseEntity="Collection" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Collection" positionX="180" positionY="42" width="128" height="73"/>
+        <element name="Video" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>

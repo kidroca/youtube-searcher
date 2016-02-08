@@ -12,7 +12,6 @@
 		6B3DFC0C1C635740009D96D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0B1C635740009D96D4 /* main.m */; };
 		6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0E1C635740009D96D4 /* AppDelegate.m */; };
 		6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC111C635740009D96D4 /* SearchViewController.m */; };
-		6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC141C635740009D96D4 /* SecondViewController.m */; };
 		6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC161C635740009D96D4 /* Main.storyboard */; };
 		6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC191C635740009D96D4 /* Assets.xcassets */; };
 		6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,14 @@
 		6B436D241C67B69F0043828C /* VideoResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B436D231C67B69F0043828C /* VideoResultCell.xib */; };
 		6B436D2A1C67B7DE0043828C /* VideoResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D291C67B7DE0043828C /* VideoResultCell.swift */; };
 		6B436D2C1C67C1530043828C /* VideoResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D2B1C67C1530043828C /* VideoResultTableViewController.swift */; };
+		6B436D2E1C6829990043828C /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D2D1C6829990043828C /* LoadingCell.swift */; };
+		6B436D311C6829C20043828C /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B436D301C6829C20043828C /* LoadingCell.xib */; };
+		6B436D351C68335C0043828C /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D341C68335C0043828C /* YTPlayerView.m */; };
+		6B436D371C6833EF0043828C /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B436D361C6833EF0043828C /* Assets.bundle */; };
+		6B436D3B1C6835950043828C /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D3A1C6835950043828C /* VideoPlayerViewController.m */; };
+		6B436D401C684B320043828C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B436D3F1C684B320043828C /* CoreData.framework */; };
+		6B436D691C684F700043828C /* youtube-searcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D671C684F700043828C /* youtube-searcher.xcdatamodeld */; };
+		6B436D6C1C6858880043828C /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D6B1C6858880043828C /* Playlist.m */; };
 		6B890DAC1C664D0400551FFF /* PagedVideoCollectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */; };
 		6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB01C664E1F00551FFF /* PageInfo.m */; };
 		6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB41C664EBC00551FFF /* VideoItemResult.m */; };
@@ -51,8 +58,6 @@
 		6B3DFC0E1C635740009D96D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6B3DFC101C635740009D96D4 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		6B3DFC111C635740009D96D4 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		6B3DFC131C635740009D96D4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		6B3DFC141C635740009D96D4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		6B3DFC171C635740009D96D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B3DFC191C635740009D96D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B3DFC1C1C635740009D96D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +72,17 @@
 		6B436D281C67B7DE0043828C /* youtube-searcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "youtube-searcher-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B436D291C67B7DE0043828C /* VideoResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResultCell.swift; sourceTree = "<group>"; };
 		6B436D2B1C67C1530043828C /* VideoResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResultTableViewController.swift; sourceTree = "<group>"; };
+		6B436D2D1C6829990043828C /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		6B436D301C6829C20043828C /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		6B436D331C68335C0043828C /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		6B436D341C68335C0043828C /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		6B436D361C6833EF0043828C /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
+		6B436D391C6835950043828C /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		6B436D3A1C6835950043828C /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
+		6B436D3F1C684B320043828C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6B436D681C684F700043828C /* youtube-searcher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "youtube-searcher.xcdatamodel"; sourceTree = "<group>"; };
+		6B436D6A1C6858880043828C /* Playlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
+		6B436D6B1C6858880043828C /* Playlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
 		6B890DAA1C664D0400551FFF /* PagedVideoCollectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedVideoCollectionResult.h; sourceTree = "<group>"; };
 		6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedVideoCollectionResult.m; sourceTree = "<group>"; };
 		6B890DAF1C664E1F00551FFF /* PageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageInfo.h; sourceTree = "<group>"; };
@@ -88,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B436D401C684B320043828C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +123,8 @@
 			children = (
 				6B890DAD1C664DE500551FFF /* Response */,
 				6B890DB21C664E9900551FFF /* Request */,
+				6B436D6A1C6858880043828C /* Playlist.h */,
+				6B436D6B1C6858880043828C /* Playlist.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -124,6 +143,7 @@
 		6B3DFBFE1C635740009D96D4 = {
 			isa = PBXGroup;
 			children = (
+				6B436D3F1C684B320043828C /* CoreData.framework */,
 				6B3DFC091C635740009D96D4 /* youtube-searcher */,
 				6B3DFC261C635740009D96D4 /* youtube-searcherTests */,
 				6B3DFC081C635740009D96D4 /* Products */,
@@ -142,6 +162,7 @@
 		6B3DFC091C635740009D96D4 /* youtube-searcher */ = {
 			isa = PBXGroup;
 			children = (
+				6B436D381C68341E0043828C /* Player */,
 				6BF84EFD1C65F0D900C8DE59 /* Data */,
 				6B2D01161C65738F0058B110 /* Helpers */,
 				6B2D01121C6566E10058B110 /* Models */,
@@ -179,10 +200,9 @@
 		6B3DFC331C6369B1009D96D4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6B3DFC101C635740009D96D4 /* SearchViewController.h */,
-				6B3DFC111C635740009D96D4 /* SearchViewController.m */,
-				6B3DFC131C635740009D96D4 /* SecondViewController.h */,
-				6B3DFC141C635740009D96D4 /* SecondViewController.m */,
+				6B436D3D1C6835C70043828C /* VideoPlayerController */,
+				6B436D3C1C6835A40043828C /* SearchController */,
+				6B436D3E1C6835F00043828C /* SavedItemsController */,
 				6B436D2B1C67C1530043828C /* VideoResultTableViewController.swift */,
 			);
 			name = ViewControllers;
@@ -191,6 +211,7 @@
 		6B3DFC341C6369C3009D96D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B436D2F1C6829AB0043828C /* LoadingCell */,
 				6B436D271C67B78F0043828C /* VideoResultCell */,
 				6B436D261C67B7810043828C /* DropDownMenu */,
 			);
@@ -214,6 +235,58 @@
 				6B436D291C67B7DE0043828C /* VideoResultCell.swift */,
 			);
 			name = VideoResultCell;
+			sourceTree = "<group>";
+		};
+		6B436D2F1C6829AB0043828C /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				6B436D2D1C6829990043828C /* LoadingCell.swift */,
+				6B436D301C6829C20043828C /* LoadingCell.xib */,
+			);
+			name = LoadingCell;
+			sourceTree = "<group>";
+		};
+		6B436D321C68335C0043828C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6B436D331C68335C0043828C /* YTPlayerView.h */,
+				6B436D341C68335C0043828C /* YTPlayerView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6B436D381C68341E0043828C /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				6B436D361C6833EF0043828C /* Assets.bundle */,
+				6B436D321C68335C0043828C /* Classes */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		6B436D3C1C6835A40043828C /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DFC101C635740009D96D4 /* SearchViewController.h */,
+				6B3DFC111C635740009D96D4 /* SearchViewController.m */,
+			);
+			name = SearchController;
+			sourceTree = "<group>";
+		};
+		6B436D3D1C6835C70043828C /* VideoPlayerController */ = {
+			isa = PBXGroup;
+			children = (
+				6B436D391C6835950043828C /* VideoPlayerViewController.h */,
+				6B436D3A1C6835950043828C /* VideoPlayerViewController.m */,
+			);
+			name = VideoPlayerController;
+			sourceTree = "<group>";
+		};
+		6B436D3E1C6835F00043828C /* SavedItemsController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SavedItemsController;
 			sourceTree = "<group>";
 		};
 		6B890DAD1C664DE500551FFF /* Response */ = {
@@ -251,6 +324,7 @@
 		6BF84EFD1C65F0D900C8DE59 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6B436D671C684F700043828C /* youtube-searcher.xcdatamodeld */,
 				6BF84EFE1C65F11F00C8DE59 /* HttpRequester.h */,
 				6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */,
 				6B890DB61C66525900551FFF /* DataHandler.h */,
@@ -343,6 +417,8 @@
 			files = (
 				6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */,
 				6B436D241C67B69F0043828C /* VideoResultCell.xib in Resources */,
+				6B436D311C6829C20043828C /* LoadingCell.xib in Resources */,
+				6B436D371C6833EF0043828C /* Assets.bundle in Resources */,
 				6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */,
 				6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */,
 				6B3DFC361C636AA9009D96D4 /* DropDownMenu.xib in Resources */,
@@ -363,21 +439,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B436D691C684F700043828C /* youtube-searcher.xcdatamodeld in Sources */,
 				6B890DAC1C664D0400551FFF /* PagedVideoCollectionResult.m in Sources */,
 				6B2D01151C6567030058B110 /* VideoQueryModel.m in Sources */,
 				6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */,
+				6B436D351C68335C0043828C /* YTPlayerView.m in Sources */,
 				6BF84F001C65F11F00C8DE59 /* HttpRequester.m in Sources */,
 				6B890DB81C66525900551FFF /* DataHandler.m in Sources */,
 				6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */,
-				6B3DFC151C635740009D96D4 /* SecondViewController.m in Sources */,
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
 				6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */,
 				6B3DFC0C1C635740009D96D4 /* main.m in Sources */,
+				6B436D2E1C6829990043828C /* LoadingCell.swift in Sources */,
 				6B436D2A1C67B7DE0043828C /* VideoResultCell.swift in Sources */,
 				6B436D2C1C67C1530043828C /* VideoResultTableViewController.swift in Sources */,
 				6B890DBE1C66741A00551FFF /* AppStart.m in Sources */,
+				6B436D3B1C6835950043828C /* VideoPlayerViewController.m in Sources */,
 				6B2D01191C6573BB0058B110 /* PropertyExtractor.m in Sources */,
 				6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */,
+				6B436D6C1C6858880043828C /* Playlist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +663,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6B436D671C684F700043828C /* youtube-searcher.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B436D681C684F700043828C /* youtube-searcher.xcdatamodel */,
+			);
+			currentVersion = 6B436D681C684F700043828C /* youtube-searcher.xcdatamodel */;
+			path = "youtube-searcher.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6B3DFBFF1C635740009D96D4 /* Project object */;
 }
