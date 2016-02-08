@@ -18,6 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ji-QXS">
+                                <rect key="frame" x="5" y="552" width="365" height="58"/>
+                                <color key="backgroundColor" red="0.21176470588235294" green="0.46666666666666667" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <state key="normal" title="Ready">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onBtnReadyTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nvw-u2-mce"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-xg-3vX" userLabel="Content Wrapper">
                                 <rect key="frame" x="5" y="129" width="365" height="395"/>
                                 <subviews>
@@ -156,22 +172,6 @@
                                     <constraint firstItem="t3W-Z4-VGH" firstAttribute="height" secondItem="xFW-kM-AHs" secondAttribute="height" id="KBv-8B-3Yi"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ji-QXS">
-                                <rect key="frame" x="5" y="552" width="365" height="58"/>
-                                <color key="backgroundColor" red="0.21176470588235294" green="0.46666666666666667" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
-                                <state key="normal" title="Ready">
-                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onBtnReadyTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nvw-u2-mce"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -216,10 +216,35 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="Nl9-5Z-omp" kind="show" identifier="forVideoPlayer" id="mY7-qN-XRx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLC-y3-oSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1965.5" y="145.5"/>
+            <point key="canvasLocation" x="1903" y="-286"/>
+        </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="pec-pu-YhM">
+            <objects>
+                <viewController id="Nl9-5Z-omp" customClass="VideoPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="We9-2H-6SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="zl5-Qo-qyY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="syL-w8-hxh" customClass="YTPlayerView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="playerView" destination="syL-w8-hxh" id="qLR-Fb-67H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0d-KB-jFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="-286"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
