@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YTPlayerView.h"
+#import "VideoItemResult.h"
 
 @interface VideoPlayerViewController : UIViewController
+
+@property(strong, nonatomic) VideoItemResult *video;
 
 @end

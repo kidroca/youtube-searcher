@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+public class LoadingCell: UITableViewCell {
+    
+    @IBOutlet weak var viewWrapper: UIView!
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
+}

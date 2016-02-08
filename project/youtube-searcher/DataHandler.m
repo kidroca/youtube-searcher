@@ -7,6 +7,10 @@
 //
 
 #import "DataHandler.h"
+#import "AppDelegate.h"
+
+NSString *const PLAYLIST_ENTITY_KEY = @"Playlist";
+NSString *const VIDEO_ENTITY_KEY = @"Video";
 
 @interface DataHandler()
 
@@ -74,13 +78,63 @@
     NSURLQueryItem *fields =
     [NSURLQueryItem queryItemWithName:@"fields"
                                 value:@"items(id,snippet),nextPageToken,prevPageToken"];
+    // Todo get this value from user settings
+    NSURLQueryItem *resultsPerPage = [NSURLQueryItem queryItemWithName:@"maxResults" value:@"10"];
     
     [queryItems addObject:key];
     [queryItems addObject:part];
     [queryItems addObject:type];
     [queryItems addObject:fields];
+    [queryItems addObject:resultsPerPage];
     
     return queryItems;
 }
 
+-(void)savePlaylist:(NSString *) name withVideos:(NSArray *) videos{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:PLAYLIST_ENTITY_KEY
+                                              inManagedObjectContext:self.getManagedContext];
+    
+    NSManagedObject *playlist = [[NSManagedObject alloc] initWithEntity:entity
+                                         insertIntoManagedObjectContext:self.getManagedContext];
+    
+    NSMutableSet *set = [NSMutableSet setWithArray:videos];
+    [playlist setValue:set forKey:@"videos"];
+    [playlist setValue:name forKey:@"name"];
+    
+    NSError *err = nil;
+    [[self getManagedContext] save:&err];
+    
+    if (err) {
+        NSException *ex = [NSException exceptionWithName:@"Database error" reason:[NSString stringWithFormat:@"Failed saving to the database: %@", err]  userInfo:nil];
+        
+        [ex raise];
+    }
+}
+
+- (NSArray *) loadPlaylistSkiping:(NSInteger)skip andTaking:(NSInteger)take{
+    NSFetchRequest *fetech = [NSFetchRequest fetchRequestWithEntityName:PLAYLIST_ENTITY_KEY];
+    fetech.fetchOffset = skip;
+    fetech.fetchLimit = take;
+    
+    NSError *err = nil;
+    
+    NSArray *playlists = [[self getManagedContext] executeFetchRequest:fetech error:&err];
+    
+    if(err){
+        NSException *ex = [NSException exceptionWithName:@"Database error" reason:[NSString stringWithFormat:@"Failed fetching from the database: %@", err]  userInfo:nil];
+        
+        [ex raise];
+    }
+    
+    return playlists;
+}
+
+//-(NSManagedObject *) findPlaylist:(NSString *)name{
+//    NSFetchRequest *fetech = [NSFetchRequest fetchRequestWithEntityName:PLAYLIST_ENTITY_KEY];
+//}
+
+-(NSManagedObjectContext *)getManagedContext{
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    return delegate.managedObjectContext;
+}
 @end

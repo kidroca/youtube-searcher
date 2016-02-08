@@ -10,4 +10,13 @@
 
 @implementation Playlist
 
+- (instancetype)initWith:(NSString *)name {
+    if (self = [super init]) {
+        self.name = name;
+        self.videos = [NSMutableArray array];
+    }
+
+    return self;
+}
+
 @end
