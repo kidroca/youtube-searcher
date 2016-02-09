@@ -28,7 +28,9 @@
 		6B436D3B1C6835950043828C /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D3A1C6835950043828C /* VideoPlayerViewController.m */; };
 		6B436D401C684B320043828C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B436D3F1C684B320043828C /* CoreData.framework */; };
 		6B436D691C684F700043828C /* youtube-searcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D671C684F700043828C /* youtube-searcher.xcdatamodeld */; };
-		6B436D6C1C6858880043828C /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D6B1C6858880043828C /* Playlist.m */; };
+		6B436D6C1C6858880043828C /* PlaylistMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D6B1C6858880043828C /* PlaylistMO.m */; };
+		6B5D06AF1C69F54D00B2F761 /* CoreDataRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D06AE1C69F54D00B2F761 /* CoreDataRequester.m */; };
+		6B5D06B31C6A380900B2F761 /* VideoMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D06B21C6A380900B2F761 /* VideoMO.m */; };
 		6B890DAC1C664D0400551FFF /* PagedVideoCollectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */; };
 		6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB01C664E1F00551FFF /* PageInfo.m */; };
 		6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB41C664EBC00551FFF /* VideoItemResult.m */; };
@@ -81,8 +83,12 @@
 		6B436D3A1C6835950043828C /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 		6B436D3F1C684B320043828C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B436D681C684F700043828C /* youtube-searcher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "youtube-searcher.xcdatamodel"; sourceTree = "<group>"; };
-		6B436D6A1C6858880043828C /* Playlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
-		6B436D6B1C6858880043828C /* Playlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
+		6B436D6A1C6858880043828C /* PlaylistMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistMO.h; sourceTree = "<group>"; };
+		6B436D6B1C6858880043828C /* PlaylistMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistMO.m; sourceTree = "<group>"; };
+		6B5D06AD1C69F54D00B2F761 /* CoreDataRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataRequester.h; sourceTree = "<group>"; };
+		6B5D06AE1C69F54D00B2F761 /* CoreDataRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataRequester.m; sourceTree = "<group>"; };
+		6B5D06B11C6A380900B2F761 /* VideoMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMO.h; sourceTree = "<group>"; };
+		6B5D06B21C6A380900B2F761 /* VideoMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMO.m; sourceTree = "<group>"; };
 		6B890DAA1C664D0400551FFF /* PagedVideoCollectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedVideoCollectionResult.h; sourceTree = "<group>"; };
 		6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedVideoCollectionResult.m; sourceTree = "<group>"; };
 		6B890DAF1C664E1F00551FFF /* PageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageInfo.h; sourceTree = "<group>"; };
@@ -121,10 +127,9 @@
 		6B2D01121C6566E10058B110 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6B5D06B01C6A16B100B2F761 /* CoreModels */,
 				6B890DAD1C664DE500551FFF /* Response */,
 				6B890DB21C664E9900551FFF /* Request */,
-				6B436D6A1C6858880043828C /* Playlist.h */,
-				6B436D6B1C6858880043828C /* Playlist.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -165,7 +170,6 @@
 				6B436D381C68341E0043828C /* Player */,
 				6BF84EFD1C65F0D900C8DE59 /* Data */,
 				6B2D01161C65738F0058B110 /* Helpers */,
-				6B2D01121C6566E10058B110 /* Models */,
 				6B3DFC341C6369C3009D96D4 /* Views */,
 				6B3DFC0D1C635740009D96D4 /* AppDelegate.h */,
 				6B3DFC0E1C635740009D96D4 /* AppDelegate.m */,
@@ -289,6 +293,17 @@
 			name = SavedItemsController;
 			sourceTree = "<group>";
 		};
+		6B5D06B01C6A16B100B2F761 /* CoreModels */ = {
+			isa = PBXGroup;
+			children = (
+				6B436D6A1C6858880043828C /* PlaylistMO.h */,
+				6B436D6B1C6858880043828C /* PlaylistMO.m */,
+				6B5D06B11C6A380900B2F761 /* VideoMO.h */,
+				6B5D06B21C6A380900B2F761 /* VideoMO.m */,
+			);
+			name = CoreModels;
+			sourceTree = "<group>";
+		};
 		6B890DAD1C664DE500551FFF /* Response */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,11 +339,14 @@
 		6BF84EFD1C65F0D900C8DE59 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6B2D01121C6566E10058B110 /* Models */,
 				6B436D671C684F700043828C /* youtube-searcher.xcdatamodeld */,
 				6BF84EFE1C65F11F00C8DE59 /* HttpRequester.h */,
 				6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */,
 				6B890DB61C66525900551FFF /* DataHandler.h */,
 				6B890DB71C66525900551FFF /* DataHandler.m */,
+				6B5D06AD1C69F54D00B2F761 /* CoreDataRequester.h */,
+				6B5D06AE1C69F54D00B2F761 /* CoreDataRequester.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -449,6 +467,7 @@
 				6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */,
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
 				6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */,
+				6B5D06AF1C69F54D00B2F761 /* CoreDataRequester.m in Sources */,
 				6B3DFC0C1C635740009D96D4 /* main.m in Sources */,
 				6B436D2E1C6829990043828C /* LoadingCell.swift in Sources */,
 				6B436D2A1C67B7DE0043828C /* VideoResultCell.swift in Sources */,
@@ -457,7 +476,8 @@
 				6B436D3B1C6835950043828C /* VideoPlayerViewController.m in Sources */,
 				6B2D01191C6573BB0058B110 /* PropertyExtractor.m in Sources */,
 				6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */,
-				6B436D6C1C6858880043828C /* Playlist.m in Sources */,
+				6B436D6C1C6858880043828C /* PlaylistMO.m in Sources */,
+				6B5D06B31C6A380900B2F761 /* VideoMO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
