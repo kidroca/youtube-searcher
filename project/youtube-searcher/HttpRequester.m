@@ -38,6 +38,7 @@ andCompletionHandler:(void (^)(NSDictionary * _Nullable))handler{
                     [NSJSONSerialization JSONObjectWithData:data
                                                     options:NSJSONReadingAllowFragments
                                                       error:nil];
+                
                     
                     NSLog(@"ResponseUrl: %@ Data: %@",response.URL, dataDict);
                     handler(dataDict);
@@ -46,7 +47,6 @@ andCompletionHandler:(void (^)(NSDictionary * _Nullable))handler{
 }
 
 - (void) appendQuery:(id)query to:(NSURLComponents *)urlComponents{
-    NSLog(@"%@", [query class]);
     
     if ([query isMemberOfClass:[NSString class]]) {
         [urlComponents setQuery: query];

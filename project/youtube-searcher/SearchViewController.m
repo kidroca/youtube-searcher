@@ -5,7 +5,7 @@
 //  Created by Peter Velkov on 2/4/16.
 //  Copyright © 2016 Peter Velkov. All rights reserved.
 //
-	
+
 #import "SearchViewController.h"
 #import "DataHandler.h"
 #import "PagedVideoCollection_HttpExtensions.h"
@@ -31,6 +31,7 @@
 @implementation SearchViewController
 
 static NSString *videoResultControllerId = @"videoResultControllerId";
+static NSString *segueToVideoResultsId = @"segueToVideoResults";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,10 +45,10 @@ static NSString *videoResultControllerId = @"videoResultControllerId";
     self.ddSortOrder.menuItems = orderTypes;
 }
 
--(void) uiConfig{	    
+-(void) uiConfig{
     UIColor *textColor = self.lblSearch.textColor;
     UIColor *bgColor = self.btnReady.backgroundColor;
-//    UIFont *font = self.lblSearch.font;
+    //    UIFont *font = self.lblSearch.font;
     
     [self.dpPublishedAfter setValue:textColor forKey:@"textColor"];
     [self.dpPublishedBefore setValue:textColor forKey:@"textColor"];
@@ -66,25 +67,25 @@ static NSString *videoResultControllerId = @"videoResultControllerId";
     self.isUserInterestedInMaximumDateRestriction = YES;
 }
 
-- (IBAction)onBtnReadyTap:(id)sender {
-    [self fillQueryInformation];
-
-    VideoResultTableViewController *resultsVC =
-    [self.storyboard instantiateViewControllerWithIdentifier:videoResultControllerId];
-    [self.navigationController pushViewController:resultsVC animated:YES];
-    
-    [[DataHandler sharedHandler] searchFor:self.queryModel
-                               withHandler:^(NSDictionary * _Nullable dict) {
-                                   
-                                   PagedVideoCollectionResult *videos =
-                                   [PagedVideoCollectionResult pagedCollectionWithDict:dict];
-                                   NSLog(@"%@", videos);
-                                   
-                                    // Execute from the Main thread
-                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                       [resultsVC assignVideoCollection:videos];
-                                   });	
-                               }];
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:segueToVideoResultsId]) {
+        [self fillQueryInformation];
+        
+        __weak VideoResultTableViewController *toVC = segue.destinationViewController;
+        
+        [[DataHandler sharedHandler] searchFor:self.queryModel
+                                   withHandler:^(NSDictionary * _Nullable dict) {
+                                       
+                                       PagedVideoCollectionResult *videos =
+                                       [PagedVideoCollectionResult pagedCollectionWithDict:dict];
+                                       NSLog(@"%@", videos);
+                                       
+                                       // Execute from the Main thread
+                                   	    dispatch_async(dispatch_get_main_queue(), ^{
+                                           [toVC assignVideoCollection:videos];
+                                       });
+                                   }];
+    }
 }
 
 - (void) fillQueryInformation{
