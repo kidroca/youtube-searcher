@@ -33,14 +33,14 @@ andCompletionHandler:(void (^)(NSDictionary * _Nullable))handler{
                         return;
                     }
                     
-                    NSLog(@"Yess Rabot1!!!\r\n");
+                    NSLog(@"Yess Rabot1!!!");
                     NSDictionary *dataDict =
                     [NSJSONSerialization JSONObjectWithData:data
                                                     options:NSJSONReadingAllowFragments
                                                       error:nil];
                 
                     
-                    NSLog(@"ResponseUrl: %@ Data: %@",response.URL, dataDict);
+                    NSLog(@"ResponseUrl: %@ \n\n Data: %@",response.URL, dataDict);
                     handler(dataDict);
                 }]
      resume];
