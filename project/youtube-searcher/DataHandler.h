@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+
 #import "HttpRequester.h"
+#import "CoreDataRequester.h"
+
 #import "PagedVideoCollectionResult.h"
 #import "VideoQueryModel.h"
-#import "Playlist.h"
+#import "PlaylistMO.h"
 
 extern NSString *const PLAYLIST_ENTITY_KEY;
 extern NSString *const VIDEO_ENTITY_KEY;
@@ -25,6 +28,8 @@ extern NSString *const VIDEO_ENTITY_KEY;
 - (NSArray *)getResultOrders;
 
 - (void)setHttpRequester:(NSObject<SearcherHttpRequester> *)httpRequester;
+
+-(void)setCoreDataRequester:(NSObject<SearcherCoreDataRequester> *) coreDataRequester;
 
 + (instancetype) sharedHandler;
 

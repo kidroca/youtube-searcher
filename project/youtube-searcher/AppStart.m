@@ -8,7 +8,6 @@
 
 #import "AppStart.h"
 #import "DataHandler.h"
-#import "HttpRequester.h"
 
 @implementation AppStart
 
@@ -26,6 +25,8 @@
                           valueForKeyPath:@"AppConfig.YoutubeApiUrl"]];
     
     [instance setHttpRequester: [[HttpRequester alloc] init]];
+    
+    [instance setCoreDataRequester:[[CoreDataRequester alloc] init]];
 }
 
 @end

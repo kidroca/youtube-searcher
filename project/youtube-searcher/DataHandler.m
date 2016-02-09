@@ -16,7 +16,8 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
 
 @property(strong, nonatomic) NSString *apiKey;
 @property(strong, nonatomic) NSString *baseUrl;
-@property(strong, nonatomic) id<SearcherHttpRequester> requester;
+@property(strong, nonatomic) id<SearcherHttpRequester> httpRequester;
+@property(strong, nonatomic) id<SearcherCoreDataRequester> coreDataRequester;
 
 @end
 
@@ -41,7 +42,11 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
 }
 
 -(void)setHttpRequester:(NSObject<SearcherHttpRequester> *)httpRequester{
-    _requester = httpRequester;
+    _httpRequester = httpRequester;
+}
+
+-(void)setCoreDataRequester:(NSObject<SearcherCoreDataRequester> *)coreDataRequester{
+    _coreDataRequester = coreDataRequester;
 }
 
 -(NSArray *)getResultOrders{
@@ -54,7 +59,7 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
 -(void)searchFor:(VideoQueryModel *)videoQuery withHandler:(void (^)(NSDictionary * _Nullable))handler{
     NSMutableArray *query = [self applyDefaultParametersToQuery: [videoQuery getQueryItems]];
     
-    [self.requester httpGetFrom:self.baseUrl withQuery:query andCompletionHandler:handler];
+    [self.httpRequester httpGetFrom:self.baseUrl withQuery:query andCompletionHandler:handler];
 }
 
 -(void)getPageFor:(NSString *)pageToken withHandler:(void (^)(NSDictionary * _Nullable))handler{
@@ -62,7 +67,7 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
     
     NSMutableArray *query = [self applyDefaultParametersToQuery: pageQuery];
     
-    [self.requester httpGetFrom:self.baseUrl withQuery:query andCompletionHandler:handler];
+    [self.httpRequester httpGetFrom:self.baseUrl withQuery:query andCompletionHandler:handler];
 }
 
 -(NSMutableArray *) applyDefaultParametersToQuery:(NSArray* )query{
@@ -95,51 +100,12 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
     return queryItems;
 }
 
--(void)savePlaylist:(NSString *) name withVideos:(NSArray *) videos{
-    NSEntityDescription *entity = [NSEntityDescription entityForName:PLAYLIST_ENTITY_KEY
-                                              inManagedObjectContext:self.getManagedContext];
+-(void)createPlaylistWithName:(NSString *) name andVideos:(NSArray *) videos{
+    PlaylistMO *playlist = [self.coreDataRequester createInstanceOfEntity:PLAYLIST_ENTITY_KEY];
+    playlist.name = name;
+    playlist.videos = videos;
     
-    NSManagedObject *playlist = [[NSManagedObject alloc] initWithEntity:entity
-                                         insertIntoManagedObjectContext:self.getManagedContext];
-    
-    NSMutableSet *set = [NSMutableSet setWithArray:videos];
-    [playlist setValue:set forKey:@"videos"];
-    [playlist setValue:name forKey:@"name"];
-    
-    NSError *err = nil;
-    [[self getManagedContext] save:&err];
-    
-    if (err) {
-        NSException *ex = [NSException exceptionWithName:@"Database error" reason:[NSString stringWithFormat:@"Failed saving to the database: %@", err]  userInfo:nil];
-        
-        [ex raise];
-    }
+    [self.coreDataRequester saveChanges];
 }
 
-- (NSArray *) loadPlaylistSkiping:(NSInteger)skip andTaking:(NSInteger)take{
-    NSFetchRequest *fetech = [NSFetchRequest fetchRequestWithEntityName:PLAYLIST_ENTITY_KEY];
-    fetech.fetchOffset = skip;
-    fetech.fetchLimit = take;
-    
-    NSError *err = nil;
-    
-    NSArray *playlists = [[self getManagedContext] executeFetchRequest:fetech error:&err];
-    
-    if(err){
-        NSException *ex = [NSException exceptionWithName:@"Database error" reason:[NSString stringWithFormat:@"Failed fetching from the database: %@", err]  userInfo:nil];
-        
-        [ex raise];
-    }
-    
-    return playlists;
-}
-
-//-(NSManagedObject *) findPlaylist:(NSString *)name{
-//    NSFetchRequest *fetech = [NSFetchRequest fetchRequestWithEntityName:PLAYLIST_ENTITY_KEY];
-//}
-
--(NSManagedObjectContext *)getManagedContext{
-    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    return delegate.managedObjectContext;
-}
 @end
