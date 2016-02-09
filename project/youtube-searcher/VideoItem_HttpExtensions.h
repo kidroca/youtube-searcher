@@ -16,8 +16,13 @@ extern NSString *const VIDEO_THUMBNAIL_PATH;
 
 @interface VideoItemResult (HttpExtensions)
 
+@property(nonatomic) BOOL selected;
+
 -(NSString *)getVideoUrl;
 
 +(instancetype)videoWithDict:(NSDictionary *)dict;
+
+-(void)markAsSelected;
+-(void)unmarkAsSelected;
 
 @end
