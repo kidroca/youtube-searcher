@@ -12,7 +12,7 @@ import UIKit
 public class VideoResultTableViewController: UITableViewController	{
     let reusableCellId = "VideoResultCell";
     let loadingCellId = "LoadingCell";
-    let segueForVideoPlayerId = "forVideoPlayer";
+    let segueForVideoPlayerId = "segueForVideoPlayer";
     var alertController: UIAlertController!;
     
     var currentPage: PagedVideoCollectionResult;
@@ -32,7 +32,28 @@ public class VideoResultTableViewController: UITableViewController	{
     public required convenience init(coder: NSCoder) {
         self.init(coder)
     }
-
+    
+    @IBAction func barButtonComposeTap(sender: AnyObject) {
+        self.alertController = UIAlertController(title: "Save Playlist", message: "Enter a name for the playlist:", preferredStyle: UIAlertControllerStyle.ActionSheet);
+        
+        let textBox = UITextField();
+        alertController.view.addSubview(textBox);
+        
+        alertController.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) -> Void in
+            let selectedVideos = NSMutableArray();
+            
+            for(var i = 0; i < self.loadedVideos.count; i++) {
+                let vid = self.loadedVideos[i] as! VideoItemResult;
+                if vid.selected {
+                    selectedVideos.addObject(vid);
+                }
+            }
+            
+            DataHandler.sharedHandler().savePlaylist(textBox.text, withVideos: selectedVideos as [AnyObject]);
+            self.showPopup("Success", message: "Playlist \(textBox.text) saved sucesffull", interval: 3);
+        }))
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,15 +63,15 @@ public class VideoResultTableViewController: UITableViewController	{
         let nibLoadingCell = UINib(nibName: loadingCellId, bundle: nil);
         self.tableView.registerNib(nibLoadingCell, forCellReuseIdentifier: loadingCellId);
         
-        self.showPopup("Tip", message: "Click on the video title to save it in your playlist.", interval: 0);
+        self.showPopup("Tip", message: "Click on the video title to save it in your playlist.", interval: 3);
     }
     
     public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.loadedVideos.count + 1;
+        return self.loadedVideos.count;
     }
     
     public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.row < self.loadedVideos.count {
+        if indexPath.row < self.loadedVideos.count - 1 {
             return self.videoCell(indexPath);
         } else {
             return loadingCell();
@@ -70,11 +91,6 @@ public class VideoResultTableViewController: UITableViewController	{
         }
     }
     
-    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let video = self.loadedVideos[indexPath.row];
-        DataHandler.sharedHandler()
-    }
-    
     public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == self.segueForVideoPlayerId {
             let index = sender as! Int;
@@ -82,6 +98,14 @@ public class VideoResultTableViewController: UITableViewController	{
             let destVc = segue.destinationViewController as! VideoPlayerViewController;
             destVc.video = video;
         }
+    }
+    
+    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.loadedVideos[indexPath.row].markAsSelected();
+    }
+    
+    public override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    self.loadedVideos[indexPath.row].unmarkAsSelected();
     }
     
     public func assignVideoCollection(collection: PagedVideoCollectionResult) {
@@ -129,12 +153,12 @@ public class VideoResultTableViewController: UITableViewController	{
     private func loadingCell() -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(loadingCellId) as! LoadingCell
         
-        cell.progressIndicator.startAnimating();	
+        cell.progressIndicator.startAnimating();
         return cell;
     }
     
     private func loadNextPage() {
-  		      let dataHandler = DataHandler.sharedHandler();
+        let dataHandler = DataHandler.sharedHandler();
         
         dataHandler.getPageFor(self.currentPage.nextPageToken) { (Dictionary dict) -> Void in
             let page = PagedVideoCollectionResult.pagedCollectionWithDict(dict);

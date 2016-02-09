@@ -18,22 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ji-QXS">
-                                <rect key="frame" x="5" y="552" width="365" height="58"/>
-                                <color key="backgroundColor" red="0.21176470588235294" green="0.46666666666666667" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
-                                <state key="normal" title="Ready">
-                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onBtnReadyTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nvw-u2-mce"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-xg-3vX" userLabel="Content Wrapper">
                                 <rect key="frame" x="5" y="129" width="365" height="395"/>
                                 <subviews>
@@ -172,6 +156,22 @@
                                     <constraint firstItem="t3W-Z4-VGH" firstAttribute="height" secondItem="xFW-kM-AHs" secondAttribute="height" id="KBv-8B-3Yi"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-Ji-QXS">
+                                <rect key="frame" x="5" y="552" width="365" height="58"/>
+                                <color key="backgroundColor" red="0.21176470588235294" green="0.46666666666666667" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <state key="normal" title="Ready">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="352-D9-VMQ" kind="show" identifier="segueToVideoResults" id="kRz-IO-P46"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -186,7 +186,13 @@
                             <constraint firstItem="V8R-xg-3vX" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="65" id="taY-SK-Mdo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="c2I-fm-VGc"/>
+                    <navigationItem key="navigationItem" id="c2I-fm-VGc">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="Dxg-2G-JKO">
+                            <connections>
+                                <action selector="barButtonComposeTap:" destination="352-D9-VMQ" id="6Ga-uH-tcM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="btnReady" destination="jJI-Ji-QXS" id="PfQ-0w-E56"/>
@@ -200,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1336.5" y="-320.5"/>
+            <point key="canvasLocation" x="1280.5" y="-320.5"/>
         </scene>
         <!--Video Result Table View Controller-->
         <scene sceneID="ieW-Iw-fmf">
@@ -215,36 +221,38 @@
                             <outlet property="delegate" destination="352-D9-VMQ" id="roy-kQ-qjj"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <segue destination="Nl9-5Z-omp" kind="show" identifier="forVideoPlayer" id="mY7-qN-XRx"/>
+                        <segue destination="8xw-uN-cUs" kind="show" identifier="segueForVideoPlayer" id="tkK-lL-UxT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLC-y3-oSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-286"/>
+            <point key="canvasLocation" x="1869" y="-286"/>
         </scene>
         <!--Video Player View Controller-->
-        <scene sceneID="pec-pu-YhM">
+        <scene sceneID="1ev-mB-L1B">
             <objects>
-                <viewController id="Nl9-5Z-omp" customClass="VideoPlayerViewController" sceneMemberID="viewController">
+                <viewController id="8xw-uN-cUs" customClass="VideoPlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="We9-2H-6SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="zl5-Qo-qyY"/>
+                        <viewControllerLayoutGuide type="top" id="j0p-CH-LTT"/>
+                        <viewControllerLayoutGuide type="bottom" id="cqS-vq-TKE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="syL-w8-hxh" customClass="YTPlayerView">
+                    <view key="view" contentMode="scaleToFill" id="xqS-mf-NWh" customClass="YTPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="playerView" destination="syL-w8-hxh" id="qLR-Fb-67H"/>
+                        <outlet property="playerView" destination="xqS-mf-NWh" id="Ft8-fy-WNJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z0d-KB-jFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KL2-JV-uOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="-286"/>
+            <point key="canvasLocation" x="2436" y="-286"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -259,11 +267,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="wmp-mm-Q4S" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="WYs-tY-m4P" kind="relationship" relationship="viewControllers" id="knd-kc-Mxd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="oH6-is-TWH">
+            <objects>
+                <tableViewController id="WYs-tY-m4P" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="5" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0RE-yX-Qy5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="WYs-tY-m4P" id="bAS-wc-AVt"/>
+                            <outlet property="delegate" destination="WYs-tY-m4P" id="5zx-EK-QYd"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="HG0-DN-BkO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFt-WP-2YC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570.5" y="492.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CWr-Ki-pVK">
@@ -282,7 +311,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRN-1c-PGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.5" y="-320.5"/>
+            <point key="canvasLocation" x="746.5" y="-320.5"/>
         </scene>
     </scenes>
 </document>
