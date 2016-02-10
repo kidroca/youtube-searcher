@@ -28,6 +28,7 @@ static NSString *detailsSegueId = @"showDetailSegue";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Your Playlists";
     
     [self initializeFetchedResultsController];
     
@@ -47,6 +48,7 @@ static NSString *detailsSegueId = @"showDetailSegue";
         
         self.noPlaylistsView.center = self.view.center;
         [self.view bringSubviewToFront:self.noPlaylistsView];
+        self.noPlaylistsView.hidden = NO;
     } else {
         self.noPlaylistsView.hidden = YES;
     }
