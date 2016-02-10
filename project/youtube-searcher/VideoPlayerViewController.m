@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     if (self.video){
-        [self.playerView loadWithVideoId:self.video.videoId];
+        [self.playerView loadWithVideoId:self.video.youtubeId];
     }
 }
 

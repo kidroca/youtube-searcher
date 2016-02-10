@@ -1,4 +1,4 @@
-//
+	//
 //  VideoResultTableViewController.swift
 //  youtube-searcher
 //
@@ -16,11 +16,11 @@ public class VideoResultTableViewController: UITableViewController	{
     var alertController: UIAlertController!;
     
     var currentPage: PagedVideoCollectionResult;
-    var loadedVideos: NSMutableArray;
+    var loadedVideos: Array<VideoItemResult>;
     
     init(_ coder: NSCoder? = nil) {
         currentPage = PagedVideoCollectionResult();
-        loadedVideos = NSMutableArray();
+        loadedVideos = Array();
         
         if let coder = coder {
             super.init(coder: coder)!
@@ -34,24 +34,18 @@ public class VideoResultTableViewController: UITableViewController	{
     }
     
     @IBAction func barButtonComposeTap(sender: AnyObject) {
-        self.alertController = UIAlertController(title: "Save Playlist", message: "Enter a name for the playlist:", preferredStyle: UIAlertControllerStyle.ActionSheet);
+        alertController = UIAlertController(title: "Save Playlist", message: "Enter a name for the playlist:", preferredStyle: UIAlertControllerStyle.Alert);
         
-        let textBox = UITextField();
-        alertController.view.addSubview(textBox);
+        alertController.addAction(UIAlertAction(
+            title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil));
+        
+        alertController.addTextFieldWithConfigurationHandler(nil);
         
         alertController.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) -> Void in
-            let selectedVideos = NSMutableArray();
-            
-            for(var i = 0; i < self.loadedVideos.count; i++) {
-                let vid = self.loadedVideos[i] as! VideoItemResult;
-                if vid.selected {
-                    selectedVideos.addObject(vid);
-                }
-            }
-            
-            DataHandler.sharedHandler().savePlaylist(textBox.text, withVideos: selectedVideos as [AnyObject]);
-            self.showPopup("Success", message: "Playlist \(textBox.text) saved sucesffull", interval: 3);
+            self.savePlaylist();
         }))
+        
+        self.presentViewController(self.alertController, animated: true, completion: nil);
     }
     
     public override func viewDidLoad() {
@@ -84,17 +78,18 @@ public class VideoResultTableViewController: UITableViewController	{
         }
     }
     
-    public override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            self.loadedVideos.removeObjectAtIndex(indexPath.row);
-            self.tableView.reloadData();
-        }
-    }
+    // No reason to support deleting for now
+//    public override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//            self.loadedVideos.removeAtIndex(indexPath.row);
+//            self.tableView.reloadData();
+//        }
+//    }
     
     public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == self.segueForVideoPlayerId {
             let index = sender as! Int;
-            let video = self.loadedVideos[index] as! VideoItemResult;
+            let video = self.loadedVideos[index];
             let destVc = segue.destinationViewController as! VideoPlayerViewController;
             destVc.video = video;
         }
@@ -105,12 +100,13 @@ public class VideoResultTableViewController: UITableViewController	{
     }
     
     public override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-    self.loadedVideos[indexPath.row].unmarkAsSelected();
+        self.loadedVideos[indexPath.row].unmarkAsSelected();
     }
     
     public func assignVideoCollection(collection: PagedVideoCollectionResult) {
         self.currentPage = collection;
-        self.loadedVideos.addObjectsFromArray(collection.items as [AnyObject]);
+        let videos = collection.items as! Array<VideoItemResult>;
+        self.loadedVideos.appendContentsOf(videos);
         
         self.tableView.reloadData();
     }
@@ -120,7 +116,7 @@ public class VideoResultTableViewController: UITableViewController	{
     }
     
     func btnDetailsTap(sender: UIButton) {
-        let video = self.loadedVideos[sender.tag] as! VideoItemResult;
+        let video = self.loadedVideos[sender.tag];
         self.showPopup(video.title, message: video.videoDescription, interval: 0);
     }
     
@@ -133,13 +129,14 @@ public class VideoResultTableViewController: UITableViewController	{
         cell.contentView.userInteractionEnabled = false;
         
         let video = loadedVideos[indexPath.row];
-        let image = UIImage(data:
-            NSData(contentsOfURL:
-                NSURL(string: video.thumbnailUrl
-                    )!)!)
+        if video.thumbnailData == nil {
+            let imageData = NSData(contentsOfURL:
+                NSURL(string: video.thumbnailUrl)!);
+            video.thumbnailData = imageData;
+        }
         
         cell.lblTitle.text = video.title;
-        cell.ivBackoundImage.image = image;
+        cell.ivBackoundImage.image = UIImage(data: video.thumbnailData);
         
         cell.btnOpen.tag = indexPath.row;
         cell.btnDetails.tag = indexPath.row;
@@ -181,7 +178,48 @@ public class VideoResultTableViewController: UITableViewController	{
         self.presentViewController(self.alertController, animated: true, completion: nil);
         
         if !interval.isZero {
-            self.performSelector("dismissAlert", withObject: self, afterDelay: 2.5);
+            self.performSelector("dismissAlert", withObject: self, afterDelay: interval);
         }
     }
+    
+    private func savePlaylist(){
+        let textField = self.alertController.textFields?.first;
+        if textField == nil || textField?.text?.isEmpty == true {
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.showPopup(
+                    "Error", message: "Enter a playlist name", interval: 0);
+            });
+
+            return;
+        }
+        
+        var selectedVideos = Array<VideoItemResult>();
+        
+        for(var i = 0; i < self.loadedVideos.count; i++) {
+            let vid = self.loadedVideos[i];
+            if vid.selected {
+                selectedVideos.append(vid);
+            }
+        }
+        
+        if selectedVideos.count == 0 {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.showPopup(
+                    "Error", message: "Select some videos to add", interval: 0);
+            });
+            
+            return;
+        }
+        
+        DataHandler.sharedHandler().createPlaylistWithName(
+            textField!.text!, andVideos: selectedVideos);
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            let name = textField!.text!;
+            self.showPopup(
+                "Success", message: "Playlist \(name) saved sucesffull", interval: 0);
+        });
+    }
+    
 }

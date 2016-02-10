@@ -16,11 +16,5 @@ class VideoResultCell: UITableViewCell {
     @IBOutlet weak var btnDetails: UIButton!
     @IBOutlet weak var btnOpen: UIButton!
     
-//    override func awakeFromNib() {
-//        btnOpen.addTarget(self, action: "logMe", forControlEvents: UIControlEvents.TouchUpInside)
-//    }
-//    
-//    func logMe(){
-//        print("clicked");
-//    }
+    var attachedObject:AnyObject!;
 }
