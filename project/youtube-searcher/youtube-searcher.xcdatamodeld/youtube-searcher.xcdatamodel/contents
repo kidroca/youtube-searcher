@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10118.6" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
-    <entity name="Playlist" representedClassName="Playlist" syncable="YES">
+    <entity name="Playlist" representedClassName="PlaylistMO" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" minValueString="2" maxValueString="200" syncable="YES"/>
         <relationship name="videos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Video" inverseName="playlist" inverseEntity="Video" syncable="YES"/>
     </entity>
-    <entity name="Video" syncable="YES">
-        <attribute name="thumnailData" optional="YES" attributeType="Binary" syncable="YES"/>
+    <entity name="Video" representedClassName="VideoMO" syncable="YES">
+        <attribute name="thumbnailData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="thumbnailUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" minValueString="2" maxValueString="250" syncable="YES"/>
         <attribute name="videoDescription" optional="YES" attributeType="String" maxValueString="800" syncable="YES"/>
         <attribute name="youtubeId" optional="YES" attributeType="String" minValueString="1" maxValueString="100" syncable="YES"/>
         <relationship name="playlist" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Playlist" inverseName="videos" inverseEntity="Playlist" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Playlist" positionX="180" positionY="42" width="128" height="75"/>
-        <element name="Video" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Playlist" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Video" positionX="0" positionY="0" width="128" height="135"/>
     </elements>
 </model>

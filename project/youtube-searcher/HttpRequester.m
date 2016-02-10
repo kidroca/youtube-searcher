@@ -40,7 +40,7 @@ andCompletionHandler:(void (^)(NSDictionary * _Nullable))handler{
                                                       error:nil];
                 
                     
-                    NSLog(@"ResponseUrl: %@ \n\n Data: %@",response.URL, dataDict);
+//                    NSLog(@"ResponseUrl: %@ \n\n Data: %@",response.URL, dataDict);
                     handler(dataDict);
                 }]
      resume];

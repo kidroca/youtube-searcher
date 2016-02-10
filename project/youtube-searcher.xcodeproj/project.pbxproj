@@ -12,7 +12,6 @@
 		6B3DFC0C1C635740009D96D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0B1C635740009D96D4 /* main.m */; };
 		6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC0E1C635740009D96D4 /* AppDelegate.m */; };
 		6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC111C635740009D96D4 /* SearchViewController.m */; };
-		6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC161C635740009D96D4 /* Main.storyboard */; };
 		6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC191C635740009D96D4 /* Assets.xcassets */; };
 		6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */; };
 		6B3DFC281C635740009D96D4 /* youtube_searcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DFC271C635740009D96D4 /* youtube_searcherTests.m */; };
@@ -28,14 +27,20 @@
 		6B436D3B1C6835950043828C /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D3A1C6835950043828C /* VideoPlayerViewController.m */; };
 		6B436D401C684B320043828C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B436D3F1C684B320043828C /* CoreData.framework */; };
 		6B436D691C684F700043828C /* youtube-searcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D671C684F700043828C /* youtube-searcher.xcdatamodeld */; };
-		6B436D6C1C6858880043828C /* PlaylistMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B436D6B1C6858880043828C /* PlaylistMO.m */; };
+		6B54C2BC1C6A9B5900714B56 /* PlaylistMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54C2B51C6A9B5900714B56 /* PlaylistMO+CoreDataProperties.m */; };
+		6B54C2BD1C6A9B5900714B56 /* PlaylistMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54C2B71C6A9B5900714B56 /* PlaylistMO.m */; };
+		6B54C2BE1C6A9B5900714B56 /* VideoMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54C2B91C6A9B5900714B56 /* VideoMO+CoreDataProperties.m */; };
+		6B54C2BF1C6A9B5900714B56 /* VideoMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54C2BB1C6A9B5900714B56 /* VideoMO.m */; };
+		6B54C2C31C6AA94B00714B56 /* PlaylistDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54C2C21C6AA94B00714B56 /* PlaylistDetailsTableViewController.m */; };
 		6B5D06AF1C69F54D00B2F761 /* CoreDataRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D06AE1C69F54D00B2F761 /* CoreDataRequester.m */; };
-		6B5D06B31C6A380900B2F761 /* VideoMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D06B21C6A380900B2F761 /* VideoMO.m */; };
+		6B5D06B61C6A3E0E00B2F761 /* SavedPlaylistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D06B51C6A3E0E00B2F761 /* SavedPlaylistsTableViewController.m */; };
 		6B890DAC1C664D0400551FFF /* PagedVideoCollectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */; };
 		6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB01C664E1F00551FFF /* PageInfo.m */; };
 		6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB41C664EBC00551FFF /* VideoItemResult.m */; };
 		6B890DB81C66525900551FFF /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DB71C66525900551FFF /* DataHandler.m */; };
 		6B890DBE1C66741A00551FFF /* AppStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B890DBD1C66741A00551FFF /* AppStart.m */; };
+		6BC831331C6ADAA9002D1309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC831311C6ADAA9002D1309 /* Main.storyboard */; };
+		6BC831361C6AECC5002D1309 /* CommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC831351C6AECC5002D1309 /* CommonTableViewController.m */; };
 		6BF84F001C65F11F00C8DE59 /* HttpRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +65,6 @@
 		6B3DFC0E1C635740009D96D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6B3DFC101C635740009D96D4 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		6B3DFC111C635740009D96D4 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		6B3DFC171C635740009D96D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B3DFC191C635740009D96D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B3DFC1C1C635740009D96D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B3DFC1E1C635740009D96D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,12 +87,20 @@
 		6B436D3A1C6835950043828C /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 		6B436D3F1C684B320043828C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B436D681C684F700043828C /* youtube-searcher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "youtube-searcher.xcdatamodel"; sourceTree = "<group>"; };
-		6B436D6A1C6858880043828C /* PlaylistMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistMO.h; sourceTree = "<group>"; };
-		6B436D6B1C6858880043828C /* PlaylistMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistMO.m; sourceTree = "<group>"; };
+		6B54C2B41C6A9B5900714B56 /* PlaylistMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlaylistMO+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6B54C2B51C6A9B5900714B56 /* PlaylistMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlaylistMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6B54C2B61C6A9B5900714B56 /* PlaylistMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistMO.h; sourceTree = "<group>"; };
+		6B54C2B71C6A9B5900714B56 /* PlaylistMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistMO.m; sourceTree = "<group>"; };
+		6B54C2B81C6A9B5900714B56 /* VideoMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VideoMO+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6B54C2B91C6A9B5900714B56 /* VideoMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VideoMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6B54C2BA1C6A9B5900714B56 /* VideoMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMO.h; sourceTree = "<group>"; };
+		6B54C2BB1C6A9B5900714B56 /* VideoMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMO.m; sourceTree = "<group>"; };
+		6B54C2C11C6AA94B00714B56 /* PlaylistDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistDetailsTableViewController.h; sourceTree = "<group>"; };
+		6B54C2C21C6AA94B00714B56 /* PlaylistDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistDetailsTableViewController.m; sourceTree = "<group>"; };
 		6B5D06AD1C69F54D00B2F761 /* CoreDataRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataRequester.h; sourceTree = "<group>"; };
 		6B5D06AE1C69F54D00B2F761 /* CoreDataRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataRequester.m; sourceTree = "<group>"; };
-		6B5D06B11C6A380900B2F761 /* VideoMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMO.h; sourceTree = "<group>"; };
-		6B5D06B21C6A380900B2F761 /* VideoMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMO.m; sourceTree = "<group>"; };
+		6B5D06B41C6A3E0E00B2F761 /* SavedPlaylistsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedPlaylistsTableViewController.h; sourceTree = "<group>"; };
+		6B5D06B51C6A3E0E00B2F761 /* SavedPlaylistsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedPlaylistsTableViewController.m; sourceTree = "<group>"; };
 		6B890DAA1C664D0400551FFF /* PagedVideoCollectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedVideoCollectionResult.h; sourceTree = "<group>"; };
 		6B890DAB1C664D0400551FFF /* PagedVideoCollectionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedVideoCollectionResult.m; sourceTree = "<group>"; };
 		6B890DAF1C664E1F00551FFF /* PageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageInfo.h; sourceTree = "<group>"; };
@@ -101,6 +113,9 @@
 		6B890DBB1C66661800551FFF /* PagedVideoCollection_HttpExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedVideoCollection_HttpExtensions.h; sourceTree = "<group>"; };
 		6B890DBC1C66741A00551FFF /* AppStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStart.h; sourceTree = "<group>"; };
 		6B890DBD1C66741A00551FFF /* AppStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStart.m; sourceTree = "<group>"; };
+		6BC831321C6ADAA9002D1309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "youtube-searcher/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		6BC831341C6AECC5002D1309 /* CommonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableViewController.h; sourceTree = "<group>"; };
+		6BC831351C6AECC5002D1309 /* CommonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableViewController.m; sourceTree = "<group>"; };
 		6BF84EFE1C65F11F00C8DE59 /* HttpRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequester.h; sourceTree = "<group>"; };
 		6BF84EFF1C65F11F00C8DE59 /* HttpRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequester.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,8 +188,8 @@
 				6B3DFC341C6369C3009D96D4 /* Views */,
 				6B3DFC0D1C635740009D96D4 /* AppDelegate.h */,
 				6B3DFC0E1C635740009D96D4 /* AppDelegate.m */,
+				6BC831311C6ADAA9002D1309 /* Main.storyboard */,
 				6B3DFC331C6369B1009D96D4 /* ViewControllers */,
-				6B3DFC161C635740009D96D4 /* Main.storyboard */,
 				6B3DFC191C635740009D96D4 /* Assets.xcassets */,
 				6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */,
 				6B3DFC1E1C635740009D96D4 /* Info.plist */,
@@ -204,10 +219,13 @@
 		6B3DFC331C6369B1009D96D4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6B54C2C01C6AA92400714B56 /* PlaylistDetailsController */,
 				6B436D3D1C6835C70043828C /* VideoPlayerController */,
 				6B436D3C1C6835A40043828C /* SearchController */,
-				6B436D3E1C6835F00043828C /* SavedItemsController */,
+				6B436D3E1C6835F00043828C /* SavedPlaylistsController */,
 				6B436D2B1C67C1530043828C /* VideoResultTableViewController.swift */,
+				6BC831341C6AECC5002D1309 /* CommonTableViewController.h */,
+				6BC831351C6AECC5002D1309 /* CommonTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -286,20 +304,35 @@
 			name = VideoPlayerController;
 			sourceTree = "<group>";
 		};
-		6B436D3E1C6835F00043828C /* SavedItemsController */ = {
+		6B436D3E1C6835F00043828C /* SavedPlaylistsController */ = {
 			isa = PBXGroup;
 			children = (
+				6B5D06B41C6A3E0E00B2F761 /* SavedPlaylistsTableViewController.h */,
+				6B5D06B51C6A3E0E00B2F761 /* SavedPlaylistsTableViewController.m */,
 			);
-			name = SavedItemsController;
+			name = SavedPlaylistsController;
+			sourceTree = "<group>";
+		};
+		6B54C2C01C6AA92400714B56 /* PlaylistDetailsController */ = {
+			isa = PBXGroup;
+			children = (
+				6B54C2C11C6AA94B00714B56 /* PlaylistDetailsTableViewController.h */,
+				6B54C2C21C6AA94B00714B56 /* PlaylistDetailsTableViewController.m */,
+			);
+			name = PlaylistDetailsController;
 			sourceTree = "<group>";
 		};
 		6B5D06B01C6A16B100B2F761 /* CoreModels */ = {
 			isa = PBXGroup;
 			children = (
-				6B436D6A1C6858880043828C /* PlaylistMO.h */,
-				6B436D6B1C6858880043828C /* PlaylistMO.m */,
-				6B5D06B11C6A380900B2F761 /* VideoMO.h */,
-				6B5D06B21C6A380900B2F761 /* VideoMO.m */,
+				6B54C2B41C6A9B5900714B56 /* PlaylistMO+CoreDataProperties.h */,
+				6B54C2B51C6A9B5900714B56 /* PlaylistMO+CoreDataProperties.m */,
+				6B54C2B61C6A9B5900714B56 /* PlaylistMO.h */,
+				6B54C2B71C6A9B5900714B56 /* PlaylistMO.m */,
+				6B54C2B81C6A9B5900714B56 /* VideoMO+CoreDataProperties.h */,
+				6B54C2B91C6A9B5900714B56 /* VideoMO+CoreDataProperties.m */,
+				6B54C2BA1C6A9B5900714B56 /* VideoMO.h */,
+				6B54C2BB1C6A9B5900714B56 /* VideoMO.m */,
 			);
 			name = CoreModels;
 			sourceTree = "<group>";
@@ -433,12 +466,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC831331C6ADAA9002D1309 /* Main.storyboard in Resources */,
 				6B3DFC1D1C635740009D96D4 /* LaunchScreen.storyboard in Resources */,
 				6B436D241C67B69F0043828C /* VideoResultCell.xib in Resources */,
 				6B436D311C6829C20043828C /* LoadingCell.xib in Resources */,
 				6B436D371C6833EF0043828C /* Assets.bundle in Resources */,
 				6B3DFC1A1C635740009D96D4 /* Assets.xcassets in Resources */,
-				6B3DFC181C635740009D96D4 /* Main.storyboard in Resources */,
 				6B3DFC361C636AA9009D96D4 /* DropDownMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,26 +491,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B436D691C684F700043828C /* youtube-searcher.xcdatamodeld in Sources */,
+				6B54C2BD1C6A9B5900714B56 /* PlaylistMO.m in Sources */,
 				6B890DAC1C664D0400551FFF /* PagedVideoCollectionResult.m in Sources */,
 				6B2D01151C6567030058B110 /* VideoQueryModel.m in Sources */,
 				6B3DFC411C637022009D96D4 /* DropDownMenu.m in Sources */,
+				6B54C2BC1C6A9B5900714B56 /* PlaylistMO+CoreDataProperties.m in Sources */,
 				6B436D351C68335C0043828C /* YTPlayerView.m in Sources */,
 				6BF84F001C65F11F00C8DE59 /* HttpRequester.m in Sources */,
 				6B890DB81C66525900551FFF /* DataHandler.m in Sources */,
+				6B54C2C31C6AA94B00714B56 /* PlaylistDetailsTableViewController.m in Sources */,
 				6B890DB11C664E1F00551FFF /* PageInfo.m in Sources */,
 				6B3DFC0F1C635740009D96D4 /* AppDelegate.m in Sources */,
 				6B3DFC121C635740009D96D4 /* SearchViewController.m in Sources */,
 				6B5D06AF1C69F54D00B2F761 /* CoreDataRequester.m in Sources */,
 				6B3DFC0C1C635740009D96D4 /* main.m in Sources */,
+				6B54C2BE1C6A9B5900714B56 /* VideoMO+CoreDataProperties.m in Sources */,
 				6B436D2E1C6829990043828C /* LoadingCell.swift in Sources */,
 				6B436D2A1C67B7DE0043828C /* VideoResultCell.swift in Sources */,
+				6BC831361C6AECC5002D1309 /* CommonTableViewController.m in Sources */,
 				6B436D2C1C67C1530043828C /* VideoResultTableViewController.swift in Sources */,
 				6B890DBE1C66741A00551FFF /* AppStart.m in Sources */,
 				6B436D3B1C6835950043828C /* VideoPlayerViewController.m in Sources */,
 				6B2D01191C6573BB0058B110 /* PropertyExtractor.m in Sources */,
 				6B890DB51C664EBC00551FFF /* VideoItemResult.m in Sources */,
-				6B436D6C1C6858880043828C /* PlaylistMO.m in Sources */,
-				6B5D06B31C6A380900B2F761 /* VideoMO.m in Sources */,
+				6B5D06B61C6A3E0E00B2F761 /* SavedPlaylistsTableViewController.m in Sources */,
+				6B54C2BF1C6A9B5900714B56 /* VideoMO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,20 +538,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6B3DFC161C635740009D96D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6B3DFC171C635740009D96D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6B3DFC1B1C635740009D96D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6B3DFC1C1C635740009D96D4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6BC831311C6ADAA9002D1309 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BC831321C6ADAA9002D1309 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

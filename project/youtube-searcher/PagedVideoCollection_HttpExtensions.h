@@ -13,7 +13,7 @@ extern NSString *const PREV_PAGE_PATH;
 extern NSString *const VIDEO_COLLECTION_PATH;
 extern NSString *const PAGE_INFO_PATH;
 
-@interface PagedVideoCollectionResult ()
+@interface PagedVideoCollectionResult()
 
 +(instancetype) pagedCollectionWithDict:(NSDictionary *)dict;
 

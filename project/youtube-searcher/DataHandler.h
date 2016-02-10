@@ -15,21 +15,22 @@
 #import "PagedVideoCollectionResult.h"
 #import "VideoQueryModel.h"
 #import "PlaylistMO.h"
+#import "VideoMO.h"
 
 extern NSString *const PLAYLIST_ENTITY_KEY;
 extern NSString *const VIDEO_ENTITY_KEY;
 
 @interface DataHandler : NSObject
 
+@property(strong, nonatomic) NSObject<SearcherCoreDataRequester> *coreDataRequester;
+
+@property(strong, nonatomic) NSObject<SearcherHttpRequester> *httpRequester;
+
 - (void)setBaseUrl:(NSString *)baseUrl;
 
 - (void)setApiKey:(NSString *)apiKey;
 
 - (NSArray *)getResultOrders;
-
-- (void)setHttpRequester:(NSObject<SearcherHttpRequester> *)httpRequester;
-
--(void)setCoreDataRequester:(NSObject<SearcherCoreDataRequester> *) coreDataRequester;
 
 + (instancetype) sharedHandler;
 
@@ -38,7 +39,6 @@ extern NSString *const VIDEO_ENTITY_KEY;
 - (void)getPageFor:(NSString *) pageToken
        withHandler:(void (^)(NSDictionary *__nullable dict)) handler;
 
--(void)savePlaylist:(NSString *) name withVideos:(NSArray *) videos;
+-(void)createPlaylistWithName:(NSString *) name andVideos:(NSArray<VideoItemResult *> *)videos;
 
-- (NSArray *) loadPlaylistSkiping:(NSInteger)skip andTaking:(NSInteger)take;
 @end

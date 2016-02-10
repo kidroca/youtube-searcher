@@ -10,10 +10,11 @@
 
 @interface VideoItemResult : NSObject
 
-@property(strong, nonatomic) NSString *videoId;
+@property(strong, nonatomic) NSString *youtubeId;
 @property(strong, nonatomic) NSString *title;
 @property(strong, nonatomic) NSString *videoDescription;
 @property(strong, nonatomic) NSString *thumbnailUrl;
+@property(strong, nonatomic) NSData *thumbnailData;
 
 -(instancetype)initWithVideoId:(NSString *)videoId
                          title:(NSString *)title

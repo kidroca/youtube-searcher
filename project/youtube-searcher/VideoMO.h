@@ -2,22 +2,23 @@
 //  VideoMO.h
 //  youtube-searcher
 //
-//  Created by Peter Velkov on 2/9/16.
+//  Created by Peter Velkov on 2/10/16.
 //  Copyright © 2016 Peter Velkov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface VideoMO : NSObject
+@class PlaylistMO;
 
-@property(strong, nonatomic) NSString *youtubeId;
+NS_ASSUME_NONNULL_BEGIN
 
-@property(strong, nonatomic) NSString *videoDescription;
+@interface VideoMO : NSManagedObject
 
-@property(strong, nonatomic) NSString *title;
-
-@property(strong, nonatomic) NSData* thumbnailData;
-
--(NSString* )getVideoUrl;
+// Insert code here to declare functionality of your managed object subclass
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+#import "VideoMO+CoreDataProperties.h"

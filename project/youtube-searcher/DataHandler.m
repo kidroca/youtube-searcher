@@ -16,8 +16,6 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
 
 @property(strong, nonatomic) NSString *apiKey;
 @property(strong, nonatomic) NSString *baseUrl;
-@property(strong, nonatomic) id<SearcherHttpRequester> httpRequester;
-@property(strong, nonatomic) id<SearcherCoreDataRequester> coreDataRequester;
 
 @end
 
@@ -39,14 +37,6 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
 
 -(void)setBaseUrl:(NSString *)value{
     _baseUrl = value;
-}
-
--(void)setHttpRequester:(NSObject<SearcherHttpRequester> *)httpRequester{
-    _httpRequester = httpRequester;
-}
-
--(void)setCoreDataRequester:(NSObject<SearcherCoreDataRequester> *)coreDataRequester{
-    _coreDataRequester = coreDataRequester;
 }
 
 -(NSArray *)getResultOrders{
@@ -100,12 +90,24 @@ NSString *const VIDEO_ENTITY_KEY = @"Video";
     return queryItems;
 }
 
--(void)createPlaylistWithName:(NSString *) name andVideos:(NSArray *) videos{
-    PlaylistMO *playlist = [self.coreDataRequester createInstanceOfEntity:PLAYLIST_ENTITY_KEY];
+-(void)createPlaylistWithName:(NSString *) name andVideos:(NSArray<VideoItemResult *> *) videos{
+    PlaylistMO *playlist = (PlaylistMO *)[self.coreDataRequester createInstanceOfEntity:PLAYLIST_ENTITY_KEY];
     playlist.name = name;
-    playlist.videos = videos;
+    
+    for (VideoItemResult *videoResult in videos) {
+        VideoMO *video = (VideoMO *)[self.coreDataRequester
+                                     createInstanceOfEntity:VIDEO_ENTITY_KEY];
+        video.title = videoResult.title;
+        video.youtubeId = videoResult.youtubeId;
+        video.videoDescription = videoResult.videoDescription;
+        video.thumbnailUrl = videoResult.thumbnailUrl;
+        video.thumbnailData = videoResult.thumbnailData;
+        
+        [playlist addVideosObject: video];
+    }
     
     [self.coreDataRequester saveChanges];
+    NSLog(@"%@", playlist.videos);
 }
 
 @end

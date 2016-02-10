@@ -13,16 +13,20 @@ NSString *const VIDEO_TITLE_PATH = @"snippet.title";
 NSString *const VIDEO_DESCRIPION_PATH = @"snippet.description";
 NSString *const VIDEO_THUMBNAIL_PATH = @"snippet.thumbnails.high.url";
 
-@implementation VideoItemResult{
-    BOOL _selected;
-}
+@interface VideoItemResult()
+
+@property(nonatomic) BOOL selected;
+
+@end
+
+@implementation VideoItemResult
 
 -(instancetype)initWithVideoId:(NSString *)videoId
                          title:(NSString *)title
                    description:(NSString *)description
                andThumbnailUrl:(NSString *)thumbnailUrl{
     if(self = [super init]) {
-        self.videoId = videoId;
+        self.youtubeId = videoId;
         self.title = title;
         self.videoDescription = description;
         self.thumbnailUrl = thumbnailUrl;
@@ -48,7 +52,7 @@ NSString *const VIDEO_THUMBNAIL_PATH = @"snippet.thumbnails.high.url";
 -(NSString *)getVideoUrl{
     return [NSString stringWithFormat:[[[NSBundle mainBundle] infoDictionary]
                                        valueForKeyPath:@"AppConfig.YoutubeVideoUrlPattern"],
-            self.videoId];
+            self.youtubeId];
 }
 
 -(void)markAsSelected{
